@@ -143,12 +143,24 @@
   .exp-timeline {
     max-width: 1000px;
     margin: 0 auto;
-    padding: 20px 36px 110px;
+    padding: 16px 36px 110px;
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 18px;
   }
+  .exp-group-title {
+    font-family: "Fraunces", serif;
+    font-weight: 700;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--gold);
+    margin: 34px 0 0;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(243, 237, 226, 0.22);
+  }
+  .exp-group-title:first-child { margin-top: 8px; }
   .exp-card {
     background: rgba(243, 237, 226, 0.06);
     border: 1px solid rgba(243, 237, 226, 0.18);
@@ -247,7 +259,7 @@
     nav.top ul { gap: 14px; font-size: 13px; }
     nav.top ul li:nth-child(3) { display: none; }
     .exp-header { padding: 120px 20px 20px; }
-    .exp-timeline { padding: 20px 20px 70px; }
+    .exp-timeline { padding: 16px 20px 70px; }
     .exp-card { padding: 26px; }
   }
 </style>
@@ -268,11 +280,13 @@
 <header class="exp-header">
   <div class="eyebrow"><span class="dot"></span> Experience</div>
   <h1>Every role, in <em>detail</em>.</h1>
-  <p class="lede">A full account of my professional experience across strategy and product, communications, community organising, open-source research and hospitality leadership, listed most recent first.</p>
+  <p class="lede">A full account of my professional experience, organised as in my CV: strategy, research and advisory work, hospitality leadership, and volunteering and community engagement.</p>
   <a class="cv-btn" href="/Jio-Miguel-Ong-CV.pdf" download="Jio-Miguel-Ong-CV.pdf">Download CV <span class="ico">&darr;</span></a>
 </header>
 
 <main class="exp-timeline">
+
+  <div class="exp-group-title">Strategy, Research and Advisory Experience</div>
 
   <article class="exp-card">
     <div class="top-row">
@@ -293,21 +307,6 @@
 
   <article class="exp-card">
     <div class="top-row">
-      <h3>Civil Society Organising Intern</h3>
-      <div class="when">Jan 2026 &mdash; Apr 2026</div>
-    </div>
-    <div class="org">Citizens UK &middot; Tower Hamlets (TELCO)</div>
-    <ul>
-      <li>Advised on and advanced an integrated portfolio of policy priorities spanning the Living Wage, Living Hours, temporary accommodation, ESOL provision, air quality and youth safety across the East London boroughs.</li>
-      <li>Coordinated multi-stakeholder engagement among faith institutions, schools, universities, trade unions, councils and grassroots networks.</li>
-      <li>Designed and delivered end-to-end campaign communications for the V&amp;A Living Wage initiative, scripting, filming and editing student testimony and supporting the accountability submission to the Mayor of London at Tower Hamlets Town Hall.</li>
-      <li>Managed turnout strategy, delegate tracking and operational delivery for the TELCO Delegates Assembly, National Delegates Assembly and Issues Workshop, chairing the Safety panel and deploying CRM-style tracking to monitor engagement.</li>
-    </ul>
-    <span class="tag policy">Policy &amp; Organising</span>
-  </article>
-
-  <article class="exp-card">
-    <div class="top-row">
       <h3>Regional Communications, Media &amp; Public Relations Officer</h3>
       <div class="when">Oct 2025 &mdash; Present</div>
     </div>
@@ -323,17 +322,47 @@
 
   <article class="exp-card">
     <div class="top-row">
-      <h3>Volunteer</h3>
-      <div class="when">Sep 2025 &mdash; Present</div>
+      <h3>Civil Society Organising Intern</h3>
+      <div class="when">Jan 2026 &mdash; Apr 2026</div>
     </div>
-    <div class="org">St Luke's Community Centre, Islington</div>
+    <div class="org">Citizens UK &middot; Tower Hamlets (TELCO)</div>
     <ul>
-      <li>Provide front-of-house and administrative support within a high-footfall community hub, signposting service users to relevant programmes and external referral pathways.</li>
-      <li>Support the planning and operational delivery of large-scale community events, including seasonal festivals and stall management.</li>
-      <li>Facilitate daily community programming, including the over-55s Lunch Club, in line with safeguarding standards.</li>
+      <li>Advised on and advanced an integrated portfolio of policy priorities spanning the Living Wage, Living Hours, temporary accommodation, ESOL provision, air quality and youth safety across the East London boroughs.</li>
+      <li>Coordinated multi-stakeholder engagement among faith institutions, schools, universities, trade unions, councils and grassroots networks.</li>
+      <li>Designed and delivered end-to-end campaign communications for the V&amp;A Living Wage initiative, scripting, filming and editing student testimony and supporting the accountability submission to the Mayor of London at Tower Hamlets Town Hall.</li>
+      <li>Managed turnout strategy, delegate tracking and operational delivery for the TELCO Delegates Assembly, National Delegates Assembly and Issues Workshop, chairing the Safety panel and deploying CRM-style tracking to monitor engagement.</li>
     </ul>
-    <span class="tag community">Community</span>
+    <span class="tag policy">Policy &amp; Organising</span>
   </article>
+
+  <article class="exp-card">
+    <div class="top-row">
+      <h3>OSINT Analyst</h3>
+      <div class="when">Jan 2019 &mdash; Jul 2023</div>
+    </div>
+    <div class="org">Self-employed &middot; Freelance, by contract</div>
+    <ul>
+      <li>Conducted social media investigations on behalf of a range of client organisations, including local government bodies and academic institutions, producing intelligence products to inform organisational decision-making.</li>
+      <li>Developed expertise in open-source research methodologies, refining information-gathering and media-analysis techniques across a sustained period of independent practice.</li>
+      <li>Acquired foundational knowledge in cybersecurity disciplines, including penetration testing and operational security.</li>
+    </ul>
+    <span class="tag osint">OSINT</span>
+  </article>
+
+  <article class="exp-card">
+    <div class="top-row">
+      <h3>Social Media Manager</h3>
+      <div class="when">Jan 2016 &mdash; Mar 2020</div>
+    </div>
+    <div class="org">University of San Jose-Recoletos &middot; Cebu</div>
+    <ul>
+      <li>Developed and executed integrated content strategies across multiple student organisations, ensuring consistency with institutional brand guidelines and editorial standards.</li>
+      <li>Partnered with internal stakeholders, including the Scouts, Civilian Army and Debate Team, to promote events and drive measurable audience engagement.</li>
+    </ul>
+    <span class="tag comms">Communications</span>
+  </article>
+
+  <div class="exp-group-title">Hospitality</div>
 
   <article class="exp-card">
     <div class="top-row">
@@ -361,19 +390,6 @@
       <li>Built strong working relationships across the kitchen brigade, contributing to a cohesive team culture and a consistent guest experience.</li>
     </ul>
     <span class="tag hospitality">Hospitality</span>
-  </article>
-
-  <article class="exp-card">
-    <div class="top-row">
-      <h3>PASS Mentor</h3>
-      <div class="when">Sep 2023 &mdash; Jun 2024</div>
-    </div>
-    <div class="org">Queen Mary University of London</div>
-    <ul>
-      <li>Facilitated weekly peer-assisted learning sessions, building academic capability and examination readiness among first-year undergraduates.</li>
-      <li>Cultivated an inclusive, collaborative learning environment encouraging independent enquiry and structured problem-solving.</li>
-    </ul>
-    <span class="tag community">Mentoring</span>
   </article>
 
   <article class="exp-card">
@@ -432,33 +448,6 @@
 
   <article class="exp-card">
     <div class="top-row">
-      <h3>OSINT Analyst</h3>
-      <div class="when">Jan 2019 &mdash; Jul 2023</div>
-    </div>
-    <div class="org">Self-employed &middot; Freelance, by contract</div>
-    <ul>
-      <li>Conducted social media investigations on behalf of a range of client organisations, including local government bodies and academic institutions, producing intelligence products to inform organisational decision-making.</li>
-      <li>Developed expertise in open-source research methodologies, refining information-gathering and media-analysis techniques across a sustained period of independent practice.</li>
-      <li>Acquired foundational knowledge in cybersecurity disciplines, including penetration testing and operational security.</li>
-    </ul>
-    <span class="tag osint">OSINT</span>
-  </article>
-
-  <article class="exp-card">
-    <div class="top-row">
-      <h3>Social Media Manager</h3>
-      <div class="when">Jan 2016 &mdash; Mar 2020</div>
-    </div>
-    <div class="org">University of San Jose-Recoletos &middot; Cebu</div>
-    <ul>
-      <li>Developed and executed integrated content strategies across multiple student organisations, ensuring consistency with institutional brand guidelines and editorial standards.</li>
-      <li>Partnered with internal stakeholders, including the Scouts, Civilian Army and Debate Team, to promote events and drive measurable audience engagement.</li>
-    </ul>
-    <span class="tag comms">Communications</span>
-  </article>
-
-  <article class="exp-card">
-    <div class="top-row">
       <h3>Business Operations Assistant</h3>
       <div class="when">Jan 2016 &mdash; Mar 2022</div>
     </div>
@@ -468,6 +457,35 @@
       <li>Monitored staff performance metrics and supported data-informed operational decision-making across daily administrative functions.</li>
     </ul>
     <span class="tag ops">Operations</span>
+  </article>
+
+  <div class="exp-group-title">Volunteering and Community Engagement</div>
+
+  <article class="exp-card">
+    <div class="top-row">
+      <h3>Volunteer</h3>
+      <div class="when">Sep 2025 &mdash; Present</div>
+    </div>
+    <div class="org">St Luke's Community Centre, Islington</div>
+    <ul>
+      <li>Provide front-of-house and administrative support within a high-footfall community hub, signposting service users to relevant programmes and external referral pathways.</li>
+      <li>Support the planning and operational delivery of large-scale community events, including seasonal festivals and stall management.</li>
+      <li>Facilitate daily community programming, including the over-55s Lunch Club, in line with safeguarding standards.</li>
+    </ul>
+    <span class="tag community">Community</span>
+  </article>
+
+  <article class="exp-card">
+    <div class="top-row">
+      <h3>PASS Mentor</h3>
+      <div class="when">Sep 2023 &mdash; Jun 2024</div>
+    </div>
+    <div class="org">Queen Mary University of London</div>
+    <ul>
+      <li>Facilitated weekly peer-assisted learning sessions, building academic capability and examination readiness among first-year undergraduates.</li>
+      <li>Cultivated an inclusive, collaborative learning environment encouraging independent enquiry and structured problem-solving.</li>
+    </ul>
+    <span class="tag community">Mentoring</span>
   </article>
 
 </main>
