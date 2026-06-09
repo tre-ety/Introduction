@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Experience — Jio Miguel Ong</title>
+<meta name="description" content="Full professional experience of Jio Miguel Ong: strategy and product, communications, community organising, open-source research and hospitality leadership." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800;9..144,900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0d0d12;
+    --paper: #f3ede2;
+    --paper-soft: #ece4d4;
+    --accent: #ff5c2b;
+    --accent-deep: #d23b0d;
+    --plum: #4a1d57;
+    --teal: #1a6f6a;
+    --gold: #e8b14a;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: "Space Grotesk", -apple-system, system-ui, sans-serif;
+    background: var(--ink);
+    color: var(--paper);
+    line-height: 1.55;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  ::selection { background: var(--accent); color: var(--paper); }
+  a { color: inherit; text-decoration: none; }
+
+  /* =========== NAV =========== */
+  nav.top {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 50;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 36px;
+    background: rgba(243, 237, 226, 0.85);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(13, 13, 18, 0.08);
+    color: var(--ink);
+  }
+  nav.top .brand {
+    font-family: "Fraunces", serif;
+    font-weight: 900;
+    font-size: 22px;
+    letter-spacing: -0.02em;
+  }
+  nav.top .brand span { color: var(--accent); }
+  nav.top ul {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  nav.top ul a {
+    position: relative;
+    padding-bottom: 4px;
+    transition: color 0.25s ease;
+  }
+  nav.top ul a::after {
+    content: "";
+    position: absolute;
+    left: 0; bottom: 0;
+    width: 0; height: 2px;
+    background: var(--accent);
+    transition: width 0.3s ease;
+  }
+  nav.top ul a:hover, nav.top ul a.active { color: var(--accent); }
+  nav.top ul a:hover::after, nav.top ul a.active::after { width: 100%; }
+
+  /* =========== HEADER =========== */
+  .exp-header {
+    padding: 150px 36px 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .exp-header .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    margin-bottom: 22px;
+    color: var(--gold);
+  }
+  .exp-header .eyebrow .dot {
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    background: var(--accent);
+    animation: pulse 2s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.45; transform: scale(1.4); }
+  }
+  .exp-header h1 {
+    font-family: "Fraunces", serif;
+    font-weight: 800;
+    font-size: clamp(40px, 6vw, 78px);
+    line-height: 0.98;
+    letter-spacing: -0.035em;
+    margin-bottom: 20px;
+  }
+  .exp-header h1 em { font-style: italic; font-weight: 400; color: var(--gold); }
+  .exp-header p.lede {
+    font-size: clamp(17px, 1.4vw, 20px);
+    max-width: 660px;
+    color: rgba(243, 237, 226, 0.78);
+  }
+
+  /* =========== TIMELINE =========== */
+  .exp-timeline {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px 36px 110px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  .exp-card {
+    background: rgba(243, 237, 226, 0.06);
+    border: 1px solid rgba(243, 237, 226, 0.18);
+    border-radius: 22px;
+    padding: 30px 34px;
+    transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease;
+  }
+  .exp-card:hover {
+    transform: translateY(-3px);
+    background: rgba(255, 92, 43, 0.07);
+    border-color: var(--accent);
+  }
+  .exp-card .top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 4px;
+  }
+  .exp-card h3 {
+    font-family: "Fraunces", serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  .exp-card .when {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12px;
+    color: var(--gold);
+    letter-spacing: 0.08em;
+    white-space: nowrap;
+  }
+  .exp-card .org {
+    font-size: 15px;
+    opacity: 0.78;
+    margin-bottom: 16px;
+  }
+  .exp-card ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+  }
+  .exp-card li {
+    position: relative;
+    padding-left: 20px;
+    font-size: 14.5px;
+    color: rgba(243, 237, 226, 0.82);
+  }
+  .exp-card li::before {
+    content: "";
+    position: absolute;
+    left: 2px; top: 9px;
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+  }
+  .exp-card .tag {
+    display: inline-block;
+    margin-top: 16px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    padding: 5px 11px;
+    border-radius: 999px;
+    border: 1px solid rgba(243, 237, 226, 0.25);
+    color: rgba(243, 237, 226, 0.85);
+  }
+  .exp-card .tag.strategy { background: var(--accent); border-color: var(--accent); color: var(--paper); }
+  .exp-card .tag.policy { background: var(--gold); border-color: var(--gold); color: var(--ink); }
+  .exp-card .tag.comms { background: var(--plum); border-color: var(--plum); color: var(--paper); }
+  .exp-card .tag.osint { background: var(--teal); border-color: var(--teal); color: var(--paper); }
+  .exp-card .tag.hospitality { background: rgba(232, 177, 74, 0.18); }
+  .exp-card .tag.community { background: rgba(26, 111, 106, 0.25); }
+  .exp-card .tag.ops { background: rgba(243, 237, 226, 0.10); }
+
+  /* =========== FOOTER =========== */
+  footer {
+    margin-top: auto;
+    padding: 36px;
+    text-align: center;
+    background: var(--ink);
+    border-top: 1px solid rgba(243, 237, 226, 0.12);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(243, 237, 226, 0.5);
+  }
+  footer span { color: var(--gold); }
+
+  @media (max-width: 900px) {
+    nav.top { padding: 14px 20px; }
+    nav.top ul { gap: 14px; font-size: 13px; }
+    nav.top ul li:nth-child(3) { display: none; }
+    .exp-header { padding: 120px 20px 20px; }
+    .exp-timeline { padding: 20px 20px 70px; }
+    .exp-card { padding: 26px; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="top">
+  <a href="index.html#top" class="brand">J<span>M</span>O</a>
+  <ul>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="experience.html" class="active">Experience</a></li>
+    <li><a href="education.html">Education</a></li>
+    <li><a href="photography.html">Photography</a></li>
+    <li><a href="socials.html">Socials</a></li>
+  </ul>
+</nav>
+
+<header class="exp-header">
+  <div class="eyebrow"><span class="dot"></span> Experience</div>
+  <h1>Every role, in <em>detail</em>.</h1>
+  <p class="lede">A full account of my professional experience across strategy and product, communications, community organising, open-source research and hospitality leadership, listed most recent first.</p>
+</header>
+
+<main class="exp-timeline">
+
+  <article class="exp-card">
+    <div class="top-row">
+      <h3>Strategy &amp; Product Management Trainee</h3>
+      <div class="when">May 2026 &mdash; Present</div>
+    </div>
+    <div class="org">CIRQL &middot; Early-stage startup &middot; London</div>
+    <ul>
+      <li>Conduct structured competitor and market-positioning research, leveraging agentic AI tooling to accelerate analysis and translate findings into recommendations that directly inform the product roadmap.</li>
+      <li>Built working fluency in the application's Flutter, Dart and Firebase architecture, enabling substantive contribution to feature scoping, technical feasibility assessments and prioritisation.</li>
+      <li>Produced and hosted approximately 35 live-streamed events, driving engagement and platform visibility and contributing to 20 per cent community growth during the early launch phase.</li>
+      <li>Translated user feedback and stakeholder input into clearly defined product roadmaps, maintaining alignment across the founding team on planned features.</li>
+      <li>Spearheaded user acquisition through direct networking at live events, onboarding 50+ new users and representing the platform across London.</li>
+      <li>Sourced and onboarded 10+ event-organiser partnerships, strengthening the platform's supply-side ecosystem.</li>
+    </ul>
+    <span class="tag strategy">Strategy &amp; Product</span>
+  </article>
+
+  <article class="exp-card">
+    <div class="top-row">
+      <h3>Civil Society Organising Intern</h3>
+      <div class="when">Jan 2026 &mdash; Apr 2026</div>
+    </div>
+    <div class="org">Citizens UK &middot; Tower Hamlets (TELCO)</div>
+    <ul>
+      <li>Advised on and advanced an integrated portfolio of policy priorities spanning the Living Wage, Living Hours, temporary accommodation, ESOL provision, air quality and youth safety across the East London boroughs.</li>
+      <li>Coordinated multi-stakeholder engagement among faith institutions, schools, universities, trade unions, councils and grassroots networks.</li>
+      <li>Designed and delivered end-to-end campaign communications for the V&amp;A Living Wage initiative, scripting, filming and editing student testimony and supporting the accountability submission to the Mayor of London at Tower Hamlets Town Hall.</li>
+      <li>Managed turnout strategy, delegate tracking and operational delivery for the TELCO Delegates Assembly, National Delegates Assembly and Issues Workshop, chairing the Safety panel and deploying CRM-style tracking to monitor engagement.</li>
+    </ul>
+    <span class="tag policy">Policy &amp; Organising</span>
+  </article>
+
+  <article class="exp-card">
+    <div class="top-row">
+      <h3>Regional Communications, Media &amp; Public Relations Officer</h3>
+      <div class="when">Oct 2025 &mdash; Present</div>
+    </div>
+    <div class="org">St John Ambulance</div>
+    <ul>
+      <li>Draft and place press releases and editorial content for regional and national outlets, responding to journalist enquiries and coordinating interviews, including securing published coverage in the <em>Enfield Independent</em> for a National Volunteers' Week feature.</li>
+      <li>Plan and deliver regional public relations campaigns raising awareness of first aid, health emergencies and community volunteer recruitment across traditional and digital platforms.</li>
+      <li>Gather real-life case studies and produce multimedia materials for local broadcast, print and social channels, ensuring audience-tailored, human-interest storytelling.</li>
+      <li>Cultivate relationships with local communities and coordinate with the national press team to uphold brand consistency, editorial governance and safeguarding standards.</li>
+    </ul>
+    <span class="tag comms">Communications</span>
+  </article>
+
+  <article class="exp-card">
+    <div class="top-row">
+      <h3>Volunteer</h3>
+      <div class="when">Sep 2025 &mdash; Present</div>
+    </div>
+    <div class="org">St Luke's Community Centre, Islington</div>
+    <ul>
+      <li>Provide front-of-house and administrative support within a high-footfall community hub, signposting service users to relevant programmes and external referral pathways.</li>
+      <li>Support the planning and operational delivery of large-scale community events, including seasonal festivals and stall management.</li>
+      <li>Facilitate daily community programming, including the over-55s Lunch Club, in line with safeguarding standards.</li>
+    </ul>
+    <span class="tag community">Community</span>
+  </article>
+
+  <article class="exp-card">
+    <div class="top-row">
+      <h3>Chef de Partie</h3>
+      <div class="when">Jan 2025 &mdash; Sep 2025</div>
+    </div>
+    <div class="org">Camino</div>
+    <ul>
+      <li>Acted as a de facto section lead, coordinating junior kitchen staff including demi and commis chefs across prep, service and handover in direct support of Head Chef Nacho del Campo.</li>
+      <li>Maintained consistent output quality and pace during high-volume service by prioritising workloads, communicating across sections and resolving operational issues in real time.</li>
+      <li>Contributed to a stable and organised working environment through disciplined section ownership, station readiness and adherence to kitchen standards.</li>
+    </ul>
+    <span class="tag hospitality">Hospitality</span>
+  </article>
+
+  <article class="exp-card">
+    <div class="top-row">
+      <h3>Chef de Partie</h3>
+      <div class="when">Aug 2024 &mdash; Jan 2025</div>
+    </div>
+    <div class="org">Ib&eacute;rica</div>
+    <ul>
+      <li>Managed a section in a premium, high-volume restaurant, working alongside senior leadership to uphold quality, presentation and timing standards throughout service.</li>
+      <li>Monitored stock levels, directed mise en place and adapted rapidly to fluctuating covers, demonstrating composure and operational efficiency under sustained pressure.</li>
+      <li>Built strong working relationships across the kitchen brigade, contributing to a cohesive team culture and a consistent guest experience.</li>
+    </ul>
+    <span class="tag hospitality">Hospitality</span>
+  </article>
+
+  <article class="exp-card">
+    <div class="top-row">
+      <h3>PASS Mentor</h3>
+      <div class="when">Sep 2023 &mdash; Jun 2024</div>
+    </div>
+    <div class="org">Queen Mary University of London</div>
+    <ul>
+      <li>Facilitated weekly peer-assisted learning sessions, building academic capability and examination readiness among first-year undergraduates.</li>
+      <li>Cultivated an inclusive, collaborative learning environment encouraging independent enquiry and structured problem-solving.</li>
+    </ul>
+    <span class="tag community">Mentoring</span>
+  </article>
+
+  <article class="exp-card">
+    <div class="top-row">
+      <h3>Chef de Partie</h3>
+      <div class="when">Sep 2023 &mdash; Mar 2024</div>
+    </div>
+    <div class="org">The Lockdown Room</div>
+    <ul>
+      <li>Managed kitchen operations end-to-end, taking ownership of quality control, station readiness and stock management in a fast-paced service environment.</li>
+      <li>Took responsibility for day-to-day kitchen flow in the absence of senior oversight, demonstrating the reliability and initiative expected of a management-level operator.</li>
+    </ul>
+    <span class="tag hospitality">Hospitality</span>
+  </article>
+
+  <article class="exp-card">
+    <div class="top-row">
+      <h3>Chef de Partie</h3>
+      <div class="when">Sep 2023 &mdash; Mar 2024</div>
+    </div>
+    <div class="org">The Barre</div>
+    <ul>
+      <li>Coordinated kitchen staff and maintained service standards across a concurrent venue, managing parallel operational demands alongside responsibilities at The Lockdown Room.</li>
+      <li>Developed the capacity to manage multiple priorities simultaneously, adapting quickly to the demands of a dual-site environment with limited direct supervision.</li>
+    </ul>
+    <span class="tag hospitality">Hospitality</span>
+  </article>
+
+  <article class="exp-card">
+    <div class="top-row">
+      <h3>Supervisor</h3>
+      <div class="when">Mar 2023 &mdash; Sep 2023</div>
+    </div>
+    <div class="org">Five Guys</div>
+    <ul>
+      <li>Promoted to a supervisory position following successful completion of a formal certification programme covering operational standards, compliance and team management.</li>
+      <li>Led shifts end-to-end, managing staff performance, maintaining service standards and escalating operational concerns to management as appropriate.</li>
+      <li>Produced staff rotas up to two weeks in advance and liaised with management to align scheduling with business requirements and staffing-efficiency objectives.</li>
+      <li>Served as the primary point of accountability on shift, communicating expectations clearly under pressure.</li>
+    </ul>
+    <span class="tag hospitality">Hospitality</span>
+  </article>
+
+  <article class="exp-card">
+    <div class="top-row">
+      <h3>Crew Member</h3>
+      <div class="when">Jun 2022 &mdash; Mar 2023</div>
+    </div>
+    <div class="org">Five Guys</div>
+    <ul>
+      <li>Developed a thorough working knowledge of health and safety legislation, employee-rights frameworks and operational compliance through structured company training.</li>
+      <li>Built effective cross-functional working relationships within a fast-paced service environment, demonstrating consistent reliability and a strong team-first approach.</li>
+    </ul>
+    <span class="tag hospitality">Hospitality</span>
+  </article>
+
+  <article class="exp-card">
+    <div class="top-row">
+      <h3>OSINT Analyst</h3>
+      <div class="when">Jan 2019 &mdash; Jul 2023</div>
+    </div>
+    <div class="org">Self-employed &middot; Freelance, by contract</div>
+    <ul>
+      <li>Conducted social media investigations on behalf of a range of client organisations, including local government bodies and academic institutions, producing intelligence products to inform organisational decision-making.</li>
+      <li>Developed expertise in open-source research methodologies, refining information-gathering and media-analysis techniques across a sustained period of independent practice.</li>
+      <li>Acquired foundational knowledge in cybersecurity disciplines, including penetration testing and operational security.</li>
+    </ul>
+    <span class="tag osint">OSINT</span>
+  </article>
+
+  <article class="exp-card">
+    <div class="top-row">
+      <h3>Social Media Manager</h3>
+      <div class="when">Jan 2016 &mdash; Mar 2020</div>
+    </div>
+    <div class="org">University of San Jose-Recoletos &middot; Cebu</div>
+    <ul>
+      <li>Developed and executed integrated content strategies across multiple student organisations, ensuring consistency with institutional brand guidelines and editorial standards.</li>
+      <li>Partnered with internal stakeholders, including the Scouts, Civilian Army and Debate Team, to promote events and drive measurable audience engagement.</li>
+    </ul>
+    <span class="tag comms">Communications</span>
+  </article>
+
+  <article class="exp-card">
+    <div class="top-row">
+      <h3>Business Operations Assistant</h3>
+      <div class="when">Jan 2016 &mdash; Mar 2022</div>
+    </div>
+    <div class="org">Taza Mia &amp; Rapid&eacute; &middot; Cebu</div>
+    <ul>
+      <li>Administered payroll processing and annual leave scheduling via Microsoft Excel, ensuring full compliance with HR legislation and employment standards in Cebu.</li>
+      <li>Monitored staff performance metrics and supported data-informed operational decision-making across daily administrative functions.</li>
+    </ul>
+    <span class="tag ops">Operations</span>
+  </article>
+
+</main>
+
+<footer>
+  &copy; 2026 Jio Miguel Ong &middot; Designed and built in <span>London</span>
+</footer>
+
+</body>
+</html>
