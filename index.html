@@ -380,6 +380,32 @@
   .pill.plum { background: var(--plum); color: var(--paper); }
   .pill.teal { background: var(--teal); color: var(--paper); }
 
+  .page-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 22px;
+  }
+  .page-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    border-radius: 999px;
+    border: 2px solid var(--ink);
+    font-weight: 600;
+    font-size: 13px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease;
+  }
+  .page-links a:hover {
+    background: var(--ink);
+    color: var(--paper);
+    transform: translate(-2px, -2px);
+    box-shadow: 4px 4px 0 var(--accent);
+  }
+  .page-links a .arrow { transition: transform 0.25s ease; }
+  .page-links a:hover .arrow { transform: translateX(3px); }
+
   /* =========== EXPERIENCE / EDUCATION =========== */
   #experience { background: var(--ink); color: var(--paper); border-radius: 36px 36px 0 0; }
   #experience .section-tag { color: var(--gold); }
@@ -673,10 +699,10 @@
   <a href="#top" class="brand">J<span>M</span>O</a>
   <ul>
     <li><a href="#about">About</a></li>
-    <li><a href="experience.html">Experience</a></li>
-    <li><a href="education.html">Education</a></li>
-    <li><a href="photography.html">Photography</a></li>
-    <li><a href="socials.html">Socials</a></li>
+    <li><a href="/experience">Experience</a></li>
+    <li><a href="/education">Education</a></li>
+    <li><a href="/photography">Photography</a></li>
+    <li><a href="/socials">Socials</a></li>
   </ul>
 </nav>
 
@@ -693,10 +719,10 @@
       I am Jio Miguel Ong, a strategy and product trainee and Politics graduate of Queen Mary University of London. I turn research into roadmaps and analysis into measurable outcomes, working across product, strategic communications, policy and open-source investigation.
     </p>
     <div class="hero-cta">
-      <a class="btn btn-primary" href="experience.html">Experience <span class="arrow">&rarr;</span></a>
-      <a class="btn btn-ghost" href="education.html">Education <span class="arrow">&rarr;</span></a>
-      <a class="btn btn-ghost" href="photography.html">Photography <span class="arrow">&rarr;</span></a>
-      <a class="btn btn-ghost" href="socials.html">Socials <span class="arrow">&rarr;</span></a>
+      <a class="btn btn-primary" href="/experience">Experience <span class="arrow">&rarr;</span></a>
+      <a class="btn btn-ghost" href="/education">Education <span class="arrow">&rarr;</span></a>
+      <a class="btn btn-ghost" href="/photography">Photography <span class="arrow">&rarr;</span></a>
+      <a class="btn btn-ghost" href="/socials">Socials <span class="arrow">&rarr;</span></a>
     </div>
   </div>
 
@@ -744,13 +770,11 @@
         <dt>Studies</dt><dd>BA (Hons) Politics, Queen Mary</dd>
       </dl>
 
-      <div class="pill-row">
-        <span class="pill alt">Strategy &amp; Product</span>
-        <span class="pill plum">Comms</span>
-        <span class="pill gold">Policy</span>
-        <span class="pill teal">OSINT</span>
-        <span class="pill">Organising</span>
-        <span class="pill">Hospitality</span>
+      <div class="page-links">
+        <a href="/experience">Experience <span class="arrow">&rarr;</span></a>
+        <a href="/education">Education <span class="arrow">&rarr;</span></a>
+        <a href="/photography">Photography <span class="arrow">&rarr;</span></a>
+        <a href="/socials">Socials <span class="arrow">&rarr;</span></a>
       </div>
     </aside>
   </div>
@@ -776,32 +800,4 @@
 
   // Reveal any section currently in view or scrolled past (prevents blank sections)
   function revealInView() {
-    document.querySelectorAll('.reveal:not(.in)').forEach((el) => {
-      if (el.getBoundingClientRect().top < window.innerHeight * 0.92) {
-        el.classList.add('in');
-        io.unobserve(el);
-      }
-    });
-  }
-
-  // Reveal the section targeted by the URL hash (e.g. arriving from another page)
-  function revealHashTarget() {
-    if (!location.hash) return;
-    const t = document.querySelector(location.hash);
-    if (t && t.classList.contains('reveal')) {
-      t.classList.add('in');
-      io.unobserve(t);
-    }
-  }
-
-  revealInView();
-  revealHashTarget();
-  window.addEventListener('load', () => { revealHashTarget(); revealInView(); });
-  window.addEventListener('hashchange', () => { revealHashTarget(); setTimeout(revealInView, 400); });
-
-  // Reveal on scroll/resize too, so sections appear even if the observer fails
-  let ticking = false;
-  function onScrollOrResize() {
-    if (ticking) return;
-    ticking = true;
-    requestAnimationFrame(
+    document.querySelectorAll('.reveal:not(.in)').f
