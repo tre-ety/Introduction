@@ -665,6 +665,7 @@
   .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
   .reveal.in { opacity: 1; transform: translateY(0); }
 </style>
+<noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
 </head>
 <body>
 
@@ -940,4 +941,62 @@
 </section>
 
 <footer>
-  &copy; 2026 Jio Miguel Ong &mi
+  &copy; 2026 Jio Miguel Ong &middot; Designed and built in <span>London</span>
+</footer>
+
+<script>
+  // Reveal on scroll, with reliable fallbacks for deep links and anchors
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+
+  // Reveal any section currently in view or scrolled past (prevents blank sections)
+  function revealInView() {
+    document.querySelectorAll('.reveal:not(.in)').forEach((el) => {
+      if (el.getBoundingClientRect().top < window.innerHeight * 0.92) {
+        el.classList.add('in');
+        io.unobserve(el);
+      }
+    });
+  }
+
+  // Reveal the section targeted by the URL hash (e.g. arriving from another page)
+  function revealHashTarget() {
+    if (!location.hash) return;
+    const t = document.querySelector(location.hash);
+    if (t && t.classList.contains('reveal')) {
+      t.classList.add('in');
+      io.unobserve(t);
+    }
+  }
+
+  revealInView();
+  revealHashTarget();
+  window.addEventListener('load', () => { revealHashTarget(); revealInView(); });
+  window.addEventListener('hashchange', () => { revealHashTarget(); setTimeout(revealInView, 400); });
+
+  // Reveal on scroll/resize too, so sections appear even if the observer fails
+  let ticking = false;
+  function onScrollOrResize() {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(() => { revealInView(); ticking = false; });
+  }
+  window.addEventListener('scroll', onScrollOrResize, { passive: true });
+  window.addEventListener('resize', onScrollOrResize);
+
+  // Final safety net: reveal everything still hidden after the page settles
+  setTimeout(() => {
+    document.querySelectorAll('.reveal:not(.in)').forEach((el) => el.classList.add('in'));
+  }, 2500);
+</script>
+
+</body>
+</html>
