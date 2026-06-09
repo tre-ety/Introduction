@@ -121,6 +121,23 @@
     max-width: 660px;
     color: rgba(243, 237, 226, 0.78);
   }
+  .cv-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 28px;
+    padding: 14px 26px;
+    border-radius: 999px;
+    background: var(--accent);
+    color: var(--paper);
+    font-weight: 600;
+    font-size: 15px;
+    border: 2px solid var(--accent);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .cv-btn:hover { transform: translate(-3px, -3px); box-shadow: 6px 6px 0 var(--gold); }
+  .cv-btn .ico { transition: transform 0.25s ease; }
+  .cv-btn:hover .ico { transform: translateY(3px); }
 
   /* =========== TIMELINE =========== */
   .exp-timeline {
@@ -252,6 +269,7 @@
   <div class="eyebrow"><span class="dot"></span> Experience</div>
   <h1>Every role, in <em>detail</em>.</h1>
   <p class="lede">A full account of my professional experience across strategy and product, communications, community organising, open-source research and hospitality leadership, listed most recent first.</p>
+  <a class="cv-btn" href="/Jio-Miguel-Ong-CV.pdf" download="Jio-Miguel-Ong-CV.pdf">Download CV <span class="ico">&darr;</span></a>
 </header>
 
 <main class="exp-timeline">
