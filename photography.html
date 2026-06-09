@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Wildlife Photography — Jio Miguel Ong</title>
+<meta name="description" content="A gallery of animal and wildlife photography by Jio Miguel Ong, taken across London and beyond." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800;9..144,900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0d0d12;
+    --paper: #f3ede2;
+    --paper-soft: #ece4d4;
+    --accent: #ff5c2b;
+    --accent-deep: #d23b0d;
+    --plum: #4a1d57;
+    --teal: #1a6f6a;
+    --gold: #e8b14a;
+    --shadow: 0 18px 40px rgba(13, 13, 18, 0.18);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: "Space Grotesk", -apple-system, system-ui, sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.55;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+  ::selection { background: var(--accent); color: var(--paper); }
+  a { color: inherit; text-decoration: none; }
+
+  /* =========== NAV =========== */
+  nav.top {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 50;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 36px;
+    background: rgba(243, 237, 226, 0.85);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(13, 13, 18, 0.08);
+  }
+  nav.top .brand {
+    font-family: "Fraunces", serif;
+    font-weight: 900;
+    font-size: 22px;
+    letter-spacing: -0.02em;
+  }
+  nav.top .brand span { color: var(--accent); }
+  nav.top ul {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  nav.top ul a {
+    position: relative;
+    padding-bottom: 4px;
+    transition: color 0.25s ease;
+  }
+  nav.top ul a::after {
+    content: "";
+    position: absolute;
+    left: 0; bottom: 0;
+    width: 0; height: 2px;
+    background: var(--accent);
+    transition: width 0.3s ease;
+  }
+  nav.top ul a:hover, nav.top ul a.active { color: var(--accent); }
+  nav.top ul a:hover::after, nav.top ul a.active::after { width: 100%; }
+
+  /* =========== HEADER =========== */
+  .gallery-header {
+    padding: 150px 36px 50px;
+    max-width: 1280px;
+    margin: 0 auto;
+    position: relative;
+  }
+  .gallery-header .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    margin-bottom: 22px;
+    color: var(--accent-deep);
+  }
+  .gallery-header .eyebrow .dot {
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    background: var(--accent);
+    animation: pulse 2s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.45; transform: scale(1.4); }
+  }
+  .gallery-header h1 {
+    font-family: "Fraunces", serif;
+    font-weight: 900;
+    font-size: clamp(44px, 7vw, 96px);
+    line-height: 0.95;
+    letter-spacing: -0.035em;
+    margin-bottom: 24px;
+    max-width: 900px;
+  }
+  .gallery-header h1 em { font-style: italic; font-weight: 400; color: var(--accent); }
+  .gallery-header p.lede {
+    font-size: clamp(17px, 1.4vw, 21px);
+    max-width: 620px;
+    color: rgba(13, 13, 18, 0.78);
+  }
+
+  /* =========== FILTER BAR =========== */
+  .filter-bar {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 36px 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .filter-bar button {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 9px 18px;
+    border-radius: 999px;
+    border: 2px solid var(--ink);
+    background: transparent;
+    color: var(--ink);
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+  }
+  .filter-bar button:hover { transform: translateY(-2px); }
+  .filter-bar button.active { background: var(--ink); color: var(--paper); }
+
+  /* =========== MASONRY GRID =========== */
+  .gallery {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 30px 110px;
+    column-count: 4;
+    column-gap: 16px;
+  }
+  @media (max-width: 1100px) { .gallery { column-count: 3; } }
+  @media (max-width: 760px)  { .gallery { column-count: 2; } }
+  @media (max-width: 460px)  { .gallery { column-count: 1; } }
+
+  .photo {
+    break-inside: avoid;
+    margin-bottom: 16px;
+    position: relative;
+    border-radius: 18px;
+    overflow: hidden;
+    cursor: zoom-in;
+    box-shadow: 0 8px 22px rgba(13, 13, 18, 0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: var(--paper-soft);
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  .photo.in { opacity: 1; transform: translateY(0); }
+  .photo:hover { transform: translateY(-4px) scale(1.01); box-shadow: var(--shadow); }
+  .photo img { width: 100%; display: block; }
+  .photo .caption {
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    padding: 38px 18px 16px;
+    background: linear-gradient(to top, rgba(13,13,18,0.82) 0%, transparent 100%);
+    color: var(--paper);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  .photo:hover .caption { opacity: 1; }
+  .photo .caption .title {
+    font-family: "Fraunces", serif;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 1.2;
+  }
+  .photo .caption .meta {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: var(--gold);
+    margin-top: 3px;
+    text-transform: uppercase;
+  }
+
+  /* =========== EMPTY STATE =========== */
+  .empty-state {
+    max-width: 760px;
+    margin: 10px auto 120px;
+    padding: 56px 40px;
+    text-align: center;
+    background: var(--paper-soft);
+    border: 2px dashed rgba(13, 13, 18, 0.25);
+    border-radius: 28px;
+  }
+  .empty-state .icon { font-size: 46px; margin-bottom: 18px; }
+  .empty-state h2 {
+    font-family: "Fraunces", serif;
+    font-weight: 700;
+    font-size: 28px;
+    margin-bottom: 14px;
+  }
+  .empty-state p {
+    font-size: 16px;
+    color: rgba(13, 13, 18, 0.72);
+    max-width: 520px;
+    margin: 0 auto 10px;
+  }
+  .empty-state code {
+    font-family: "JetBrains Mono", monospace;
+    background: var(--ink);
+    color: var(--paper);
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-size: 13px;
+  }
+
+  /* =========== LIGHTBOX =========== */
+  .lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    background: rgba(8, 8, 12, 0.94);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  .lightbox.open { display: flex; opacity: 1; }
+  .lightbox img {
+    max-width: 90vw;
+    max-height: 82vh;
+    border-radius: 12px;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.6);
+  }
+  .lightbox .lb-caption {
+    position: absolute;
+    bottom: 28px; left: 0; right: 0;
+    text-align: center;
+    color: var(--paper);
+    font-family: "Fraunces", serif;
+    font-size: 18px;
+  }
+  .lightbox .lb-caption .meta {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-top: 4px;
+  }
+  .lightbox button.lb-btn {
+    position: absolute;
+    background: rgba(243, 237, 226, 0.12);
+    border: 1px solid rgba(243, 237, 226, 0.3);
+    color: var(--paper);
+    width: 52px; height: 52px;
+    border-radius: 50%;
+    font-size: 22px;
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    transition: background 0.2s ease, transform 0.2s ease;
+  }
+  .lightbox button.lb-btn:hover { background: var(--accent); transform: scale(1.08); }
+  .lb-close { top: 26px; right: 26px; }
+  .lb-prev { left: 26px; top: 50%; transform: translateY(-50%); }
+  .lb-next { right: 26px; top: 50%; transform: translateY(-50%); }
+  .lb-prev:hover, .lb-next:hover { transform: translateY(-50%) scale(1.08); }
+  @media (max-width: 640px) {
+    .lb-prev { left: 12px; } .lb-next { right: 12px; }
+    .lb-btn { width: 44px; height: 44px; font-size: 18px; }
+  }
+
+  /* =========== FOOTER =========== */
+  footer {
+    padding: 36px;
+    text-align: center;
+    background: var(--paper);
+    border-top: 1px solid rgba(13, 13, 18, 0.1);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(13, 13, 18, 0.55);
+  }
+  footer span { color: var(--accent-deep); }
+
+  @media (max-width: 900px) {
+    nav.top { padding: 14px 20px; }
+    nav.top ul { gap: 16px; font-size: 13px; }
+    .gallery-header { padding: 120px 20px 40px; }
+    .filter-bar { padding: 0 20px 24px; }
+    .gallery { padding: 0 14px 70px; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="top">
+  <a href="index.html#top" class="brand">tre<span>.</span>ety</a>
+  <ul>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#experience">Experience</a></li>
+    <li><a href="index.html#education">Education</a></li>
+    <li><a href="photography.html" class="active">Photography</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<header class="gallery-header">
+  <div class="eyebrow"><span class="dot"></span> Photography · A personal hobby</div>
+  <h1>Through the <em>lens</em>.</h1>
+  <p class="lede">A collection of photographs from my photography hobby, shot on a Nikon Z50 with the NIKKOR Z DX 16-50mm f/3.5-6.3 VR lens.</p>
+</header>
+
+<main class="gallery" id="gallery"></main>
+
+<section class="empty-state" id="emptyState" hidden>
+  <div class="icon">🦊</div>
+  <h2>The gallery is ready and waiting for photos.</h2>
+  <p>Add your image files to the <code>photos</code> folder, then the page will display them here.</p>
+  <p>Name files clearly, for example <code>red-fox-richmond-park.jpg</code>, and captions are generated automatically.</p>
+</section>
+
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="lb-btn lb-close" id="lbClose" aria-label="Close">&times;</button>
+  <button class="lb-btn lb-prev" id="lbPrev" aria-label="Previous">&#8249;</button>
+  <img id="lbImg" src="" alt="" />
+  <button class="lb-btn lb-next" id="lbNext" aria-label="Next">&#8250;</button>
+</div>
+
+<footer>
+  &copy; 2026 Jio Miguel Ong &middot; Photographed in and around <span>London</span>
+</footer>
+
+<script>
+  /* ============================================================
+     PHOTO LIST
+     Each entry is simply a filename inside the photos folder.
+     Web-optimised versions live in photos/web (full) and
+     photos/thumbs (grid). This list shows every submitted photo,
+     with no labels or categories.
+     ============================================================ */
+  const photos = [
+    "dsc_0437.jpg", "dsc_0597.jpg", "dsc_0633.jpg", "dsc_0652.jpg",
+    "dsc_0661.jpg", "dsc_0677.jpg", "dsc_0699.jpg", "dsc_0736.jpg",
+    "dsc_0990.jpg", "dsc_0993.jpg", "dsc_1004.jpg", "dsc_1015.jpg",
+    "dsc_1030.jpg", "dsc_1031.jpg", "dsc_1039.jpg", "dsc_1044.jpg",
+    "dsc_1075.jpg", "dsc_1079.jpg", "dsc_1102.jpg", "dsc_1194.jpg",
+    "dsc_1207.jpg", "dsc_1234.jpg", "dsc_1239.jpg", "dsc_1262.jpg",
+    "dsc_1286.jpg", "dsc_1421.jpg", "dsc_1445.jpg"
+  ].map(file => ({ file }));
+
+  const gallery = document.getElementById('gallery');
+  const emptyState = document.getElementById('emptyState');
+
+  function render(list) {
+    gallery.innerHTML = '';
+    list.forEach((p, i) => {
+      const fig = document.createElement('figure');
+      fig.className = 'photo';
+      fig.dataset.index = i;
+      fig.innerHTML = '<img loading="lazy" src="photos/thumbs/' + p.file + '" alt="">';
+      fig.addEventListener('click', () => openLightbox(i));
+      gallery.appendChild(fig);
+      requestAnimationFrame(() => setTimeout(() => fig.classList.add('in'), i * 40));
+    });
+  }
+
+  let current = [];
+
+  function init() {
+    if (!photos.length) {
+      emptyState.hidden = false;
+      gallery.hidden = true;
+      return;
+    }
+    current = photos;
+    render(photos);
+  }
+
+  /* ===== Lightbox ===== */
+  const lb = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lbImg');
+  let lbIndex = 0;
+
+  function openLightbox(i) {
+    lbIndex = i;
+    showLb();
+    lb.classList.add('open');
+    lb.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+  function showLb() {
+    const p = current[lbIndex];
+    lbImg.src = 'photos/web/' + p.file;
+    lbImg.alt = '';
+  }
+  function closeLb() {
+    lb.classList.remove('open');
+    lb.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+  function step(dir) {
+    lbIndex = (lbIndex + dir + current.length) % current.length;
+    showLb();
+  }
+  document.getElementById('lbClose').addEventListener('click', closeLb);
+  document.getElementById('lbNext').addEventListener('click', (e) => { e.stopPropagation(); step(1); });
+  document.getElementById('lbPrev').addEventListener('click', (e) => { e.stopPropagation(); step(-1); });
+  lb.addEventListener('click', (e) => { if (e.target === lb) closeLb(); });
+  document.addEventListener('keydown', (e) => {
+    if (!lb.classList.contains('open')) return;
+    if (e.key === 'Escape') closeLb();
+    if (e.key === 'ArrowRight') step(1);
+    if (e.key === 'ArrowLeft') step(-1);
+  });
+
+  init();
+</script>
+
+</body>
+</html>
