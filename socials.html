@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Socials — Jio Miguel Ong</title>
-<meta name="description" content="Connect with Jio Miguel Ong across LinkedIn, Instagram, X, Facebook, GitHub and more." />
+<meta name="description" content="Connect with Jio Miguel Ong across LinkedIn, Instagram, X, Facebook and more." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800;9..144,900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -191,10 +191,26 @@
   .social-card.instagram:hover .icon { background: #d6249f; }
   .social-card.x:hover .icon { background: #000; }
   .social-card.facebook:hover .icon { background: #1877f2; }
-  .social-card.github:hover .icon { background: #4a1d57; }
+  .social-card.experience:hover .icon { background: var(--accent); }
   .social-card.email:hover .icon { background: var(--teal); }
   .social-card.website:hover .icon { background: var(--gold); }
   .social-card.phone:hover .icon { background: var(--accent-deep); }
+
+  /* inverted standout cards */
+  .social-card.experience,
+  .social-card.website {
+    background: var(--paper);
+    color: var(--ink);
+    border: 2px solid var(--ink);
+  }
+  .social-card.experience .channel,
+  .social-card.website .channel { color: var(--accent-deep); }
+  .social-card.experience .icon,
+  .social-card.website .icon { background: var(--ink); }
+  .social-card.experience:hover .icon,
+  .social-card.website:hover .icon { background: var(--accent); }
+  .social-card.experience:hover,
+  .social-card.website:hover { box-shadow: 8px 8px 0 var(--ink); }
 
   /* =========== FOOTER =========== */
   footer {
@@ -224,7 +240,7 @@
 <nav class="top">
   <a href="/" class="brand">J<span>M</span>O</a>
   <ul>
-    <li><a href="/#about">About</a></li>
+    <li><a href="/">About</a></li>
     <li><a href="/experience">Experience</a></li>
     <li><a href="/education">Education</a></li>
     <li><a href="/photography">Photography</a></li>
@@ -276,12 +292,12 @@
     </div>
   </a>
 
-  <a class="social-card github" href="https://github.com/tre-ety" target="_blank" rel="noopener">
+  <a class="social-card experience" href="/experience">
     <div class="go">&rarr;</div>
     <div>
-      <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C5.37.5 0 5.87 0 12.5c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58v-2.02c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.21.08 1.84 1.24 1.84 1.24 1.07 1.84 2.81 1.31 3.5 1 .11-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.62-5.49 5.92.43.37.82 1.1.82 2.22v3.29c0 .32.21.7.82.58A12.01 12.01 0 0 0 24 12.5C24 5.87 18.63.5 12 .5z"/></svg></div>
-      <div class="channel">GitHub</div>
-      <div class="handle">@tre-ety</div>
+      <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 7h-4V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2zM10 5h4v2h-4V5zm10 14H4v-7h16v7z"/></svg></div>
+      <div class="channel">Experience</div>
+      <div class="handle">Roles &amp; history</div>
     </div>
   </a>
 
@@ -319,3 +335,4 @@
 </footer>
 
 </body>
+</html>

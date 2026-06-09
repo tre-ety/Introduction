@@ -698,7 +698,7 @@
 <nav class="top">
   <a href="#top" class="brand">J<span>M</span>O</a>
   <ul>
-    <li><a href="#about">About</a></li>
+    <li><a href="/">About</a></li>
     <li><a href="/experience">Experience</a></li>
     <li><a href="/education">Education</a></li>
     <li><a href="/photography">Photography</a></li>
@@ -785,19 +785,5 @@
   &copy; 2026 Jio Miguel Ong &middot; Designed and built in <span>London</span>
 </footer>
 
-<script>
-  // Reveal on scroll, with reliable fallbacks for deep links and anchors
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('in');
-        io.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.12 });
-
-  document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
-
-  // Reveal any section currently in view or scrolled past (prevents blank sections)
-  function revealInView() {
-    document.querySelectorAll('.reveal:not(.in)').f
+</body>
+</html>
