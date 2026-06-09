@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Wildlife Photography — Jio Miguel Ong</title>
+<title>Photography — Jio Miguel Ong</title>
 <meta name="description" content="A gallery of animal and wildlife photography by Jio Miguel Ong, taken across London and beyond." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -151,16 +151,12 @@
     max-width: 1280px;
     margin: 0 auto;
     padding: 0 30px 110px;
-    column-count: 4;
-    column-gap: 16px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
   }
-  @media (max-width: 1100px) { .gallery { column-count: 3; } }
-  @media (max-width: 760px)  { .gallery { column-count: 2; } }
-  @media (max-width: 460px)  { .gallery { column-count: 1; } }
 
   .photo {
-    break-inside: avoid;
-    margin-bottom: 16px;
     position: relative;
     border-radius: 18px;
     overflow: hidden;
@@ -170,10 +166,11 @@
     background: var(--paper-soft);
     opacity: 0;
     transform: translateY(20px);
+    aspect-ratio: 3 / 2;
   }
   .photo.in { opacity: 1; transform: translateY(0); }
-  .photo:hover { transform: translateY(-4px) scale(1.01); box-shadow: var(--shadow); }
-  .photo img { width: 100%; display: block; }
+  .photo:hover { transform: translateY(-4px) scale(1.01); box-shadow: var(--shadow); z-index: 2; }
+  .photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
   .photo .caption {
     position: absolute;
     left: 0; right: 0; bottom: 0;
