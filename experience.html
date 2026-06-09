@@ -62,7 +62,14 @@
     list-style: none;
     font-size: 14px;
     font-weight: 500;
+    flex-wrap: nowrap;
+    min-width: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
   }
+  nav.top ul::-webkit-scrollbar { display: none; }
+  nav.top ul li { flex: 0 0 auto; }
   nav.top ul a {
     position: relative;
     padding-bottom: 4px;
@@ -256,9 +263,7 @@
 
   @media (max-width: 900px) {
     nav.top { padding: 14px 20px; }
-    nav.top ul { gap: 14px; font-size: 13px; }
-    nav.top ul li:nth-child(3) { display: none; }
-    .exp-header { padding: 120px 20px 20px; }
+    nav.top ul { gap: 14px; font-size: 13px; }    .exp-header { padding: 120px 20px 20px; }
     .exp-timeline { padding: 16px 20px 70px; }
     .exp-card { padding: 26px; }
   }
@@ -362,19 +367,6 @@
     <span class="tag comms">Communications</span>
   </article>
 
-   <article class="exp-card">
-    <div class="top-row">
-      <h3>Business Operations Assistant</h3>
-      <div class="when">Jan 2016 &mdash; Mar 2022</div>
-    </div>
-    <div class="org">Taza Mia &amp; Rapid&eacute; &middot; Cebu</div>
-    <ul>
-      <li>Administered payroll processing and annual leave scheduling via Microsoft Excel, ensuring full compliance with HR legislation and employment standards in Cebu.</li>
-      <li>Monitored staff performance metrics and supported data-informed operational decision-making across daily administrative functions.</li>
-    </ul>
-    <span class="tag ops">Operations</span>
-  </article>
-
   <div class="exp-group-title">Hospitality</div>
 
   <article class="exp-card">
@@ -459,7 +451,20 @@
     <span class="tag hospitality">Hospitality</span>
   </article>
 
- <div class="exp-group-title">Volunteering and Community Engagement</div>
+  <article class="exp-card">
+    <div class="top-row">
+      <h3>Business Operations Assistant</h3>
+      <div class="when">Jan 2016 &mdash; Mar 2022</div>
+    </div>
+    <div class="org">Taza Mia &amp; Rapid&eacute; &middot; Cebu</div>
+    <ul>
+      <li>Administered payroll processing and annual leave scheduling via Microsoft Excel, ensuring full compliance with HR legislation and employment standards in Cebu.</li>
+      <li>Monitored staff performance metrics and supported data-informed operational decision-making across daily administrative functions.</li>
+    </ul>
+    <span class="tag ops">Operations</span>
+  </article>
+
+  <div class="exp-group-title">Volunteering and Community Engagement</div>
 
   <article class="exp-card">
     <div class="top-row">

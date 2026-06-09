@@ -60,7 +60,14 @@
     list-style: none;
     font-size: 14px;
     font-weight: 500;
+    flex-wrap: nowrap;
+    min-width: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
   }
+  nav.top ul::-webkit-scrollbar { display: none; }
+  nav.top ul li { flex: 0 0 auto; }
   nav.top ul a {
     position: relative;
     padding-bottom: 4px;

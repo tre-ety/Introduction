@@ -65,7 +65,14 @@
     list-style: none;
     font-size: 14px;
     font-weight: 500;
+    flex-wrap: nowrap;
+    min-width: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
   }
+  nav.top ul::-webkit-scrollbar { display: none; }
+  nav.top ul li { flex: 0 0 auto; }
   nav.top ul a {
     position: relative;
     padding-bottom: 4px;
@@ -667,9 +674,7 @@
   /* =========== RESPONSIVE =========== */
   @media (max-width: 900px) {
     nav.top { padding: 14px 20px; }
-    nav.top ul { gap: 16px; font-size: 13px; }
-    nav.top ul li:nth-child(2) { display: none; }
-    .hero {
+    nav.top ul { gap: 16px; font-size: 13px; }    .hero {
       grid-template-columns: 1fr;
       padding: 120px 20px 60px;
       gap: 40px;
