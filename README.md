@@ -30,6 +30,12 @@ and no frameworks.
 ├── education.html
 ├── photography.html
 ├── socials.html
+├── favicon.ico        # kept at root for the browser default fallback
+├── CNAME
+├── assets/
+│   ├── favicon.svg
+│   ├── apple-touch-icon.png
+│   └── Jio-Miguel-Ong-CV.pdf
 └── photos/
     ├── web/      # full-size images shown in the gallery lightbox
     └── thumbs/   # thumbnails shown in the gallery grid
