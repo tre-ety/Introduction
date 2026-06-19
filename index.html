@@ -746,7 +746,7 @@
       Strategy &amp; product · Based in London, available worldwide
     </div>
     <h1>
-      <span class="underline">Strategy</span>, <em>product</em>, and the politics of what <span class="rotate-word"><span class="word">moves</span></span> people.
+      <span class="underline">Strategy</span>, <em>product</em>, and the politics of what <br><span class="rotate-word"><span class="word">moves</span></span> people.
     </h1>
     <p class="hero-lede">
       I am Jio Miguel Ong, a strategy and product associate and Politics graduate of Queen Mary University of London. I turn research into roadmaps and analysis into measurable outcomes, working across product, strategic communications, policy and open-source investigation.
@@ -885,7 +885,7 @@
   if ('IntersectionObserver' in window) {
     var cio = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) {
-        if (e.isIntersecting) { animateCount(e.target); cio.unobserve(e.target); }
+        if (e.isIntersecting) { var t = e.target; setTimeout(function () { animateCount(t); }, 650); cio.unobserve(t); }
       });
     }, { threshold: 0.5 });
     counters.forEach(function (el) { cio.observe(el); });
