@@ -710,8 +710,15 @@
   .rotate-word .word {
     display: inline-block;
     transition: opacity 0.4s ease, transform 0.4s ease;
+    text-decoration: underline;
+    text-decoration-color: var(--gold);
+    text-decoration-thickness: 0.08em;
+    text-underline-offset: 0.12em;
   }
   .rotate-word.swap .word { opacity: 0; transform: translateY(-10px); }
+
+  /* count-up stat colour */
+  .hero-card .ticker-row .count { color: var(--gold); font-weight: 600; }
 
   /* hero card tilt */
   .hero-card { will-change: transform; }
