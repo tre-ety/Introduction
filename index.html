@@ -698,6 +698,31 @@
   /* fade-in on scroll */
   .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
   .reveal.in { opacity: 1; transform: translateY(0); }
+
+  /* rotating hero word */
+  .rotate-word {
+    display: inline-block;
+    position: relative;
+    font-style: italic;
+    font-weight: 400;
+    color: var(--accent);
+  }
+  .rotate-word .word {
+    display: inline-block;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+  }
+  .rotate-word.swap .word { opacity: 0; transform: translateY(-10px); }
+
+  /* hero card tilt */
+  .hero-card { will-change: transform; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1 !important; transform: none !important; }
+    .hero::before, .hero::after, .marquee-track,
+    .hero-eyebrow .dot { animation: none !important; }
+    .rotate-word .word { transition: none !important; }
+    html { scroll-behavior: auto; }
+  }
 </style>
 <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
 </head>
@@ -721,7 +746,7 @@
       Strategy &amp; product · Based in London, available worldwide
     </div>
     <h1>
-      <span class="underline">Strategy</span>, <em>product</em>, and the politics of what <em>moves</em> people.
+      <span class="underline">Strategy</span>, <em>product</em>, and the politics of what <span class="rotate-word"><span class="word">moves</span></span> people.
     </h1>
     <p class="hero-lede">
       I am Jio Miguel Ong, a strategy and product associate and Politics graduate of Queen Mary University of London. I turn research into roadmaps and analysis into measurable outcomes, working across product, strategic communications, policy and open-source investigation.
@@ -743,7 +768,7 @@
       <div class="ticker-row"><span>Also</span><span>Strategy Associate, Varaha</span></div>
       <div class="ticker-row"><span>Degree</span><span>BA Politics, QMUL</span></div>
       <div class="ticker-row"><span>Languages</span><span>EN / TL / CEB / ES</span></div>
-      <div class="ticker-row"><span>Latest</span><span>20% community growth</span></div>
+      <div class="ticker-row"><span>Latest</span><span><span class="count" data-target="20">0</span>% community growth</span></div>
     </div>
   </aside>
 </header>
@@ -756,11 +781,11 @@
 </div>
 
 <section id="about">
-  <span class="section-tag">// About</span>
-  <h2 class="section-title">A short <em>introduction</em> to who I am and what I care about.</h2>
+  <span class="section-tag reveal">// About</span>
+  <h2 class="section-title reveal">A short <em>introduction</em> to who I am and what I care about.</h2>
 
   <div class="about-grid">
-    <div class="about-prose">
+    <div class="about-prose reveal">
       <p>I work at the meeting point of strategy, product and politics. As a <strong>Strategy and Product Management Associate at CIRQL</strong>, an early-stage startup, I run competitor and market-positioning research using agentic AI tooling, translate user feedback into clearly defined product roadmaps, and drive growth at the coalface, hosting roughly 35 live-streamed events and contributing to <strong>20 per cent community growth</strong> during the platform's early launch. I have also built working fluency in its Flutter, Dart and Firebase architecture, allowing me to contribute to feature scoping and prioritisation.</p>
 
       <p>I pair that with commercial strategy. As a <strong>Strategy Associate at Varaha Infra Limited</strong>, I interpreted complex coal-pricing, logistics and supply-chain datasets, assessed expansion viability into Madhya Pradesh and Gujarat, and served as the UK-based liaison for investors and external stakeholders, preparing investor-facing briefings that informed executive decision-making.</p>
@@ -772,7 +797,7 @@
       <p>I research, build, write, film and organise. I care about products that earn their users, democratic resilience, dignified work, and communications that persuade rather than merely inform.</p>
     </div>
 
-    <aside class="about-quick">
+    <aside class="about-quick reveal">
       <h4>At a glance</h4>
       <dl>
         <dt>Name</dt><dd>Jio Miguel Ong</dd>
@@ -796,6 +821,79 @@
 <footer>
   &copy; 2026 Jio Miguel Ong &middot; Designed and built in <span>London</span>
 </footer>
+
+<script>
+(function () {
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* Scroll reveal */
+  var reveals = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window && !reduce) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.15 });
+    reveals.forEach(function (el) { io.observe(el); });
+  } else {
+    reveals.forEach(function (el) { el.classList.add('in'); });
+  }
+
+  /* Rotating hero word */
+  var rw = document.querySelector('.rotate-word');
+  if (rw && !reduce) {
+    var words = ['moves', 'shapes', 'persuades', 'mobilises'];
+    var wordEl = rw.querySelector('.word');
+    var i = 0;
+    setInterval(function () {
+      rw.classList.add('swap');
+      setTimeout(function () {
+        i = (i + 1) % words.length;
+        wordEl.textContent = words[i];
+        rw.classList.remove('swap');
+      }, 400);
+    }, 2800);
+  }
+
+  /* 3D tilt on the hero card */
+  var card = document.querySelector('.hero-card');
+  if (card && !reduce && window.matchMedia('(hover: hover)').matches) {
+    card.addEventListener('mousemove', function (e) {
+      var r = card.getBoundingClientRect();
+      var px = (e.clientX - r.left) / r.width - 0.5;
+      var py = (e.clientY - r.top) / r.height - 0.5;
+      card.style.transform = 'perspective(900px) rotateX(' + (-py * 6).toFixed(2) +
+        'deg) rotateY(' + (px * 6).toFixed(2) + 'deg) rotate(2deg) scale(1.02)';
+    });
+    card.addEventListener('mouseleave', function () { card.style.transform = ''; });
+  }
+
+  /* Count-up stat */
+  function animateCount(el) {
+    var target = parseInt(el.getAttribute('data-target'), 10) || 0;
+    if (reduce) { el.textContent = target; return; }
+    var dur = 1300, start = null;
+    requestAnimationFrame(function step(ts) {
+      if (!start) start = ts;
+      var p = Math.min((ts - start) / dur, 1);
+      var eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = Math.round(eased * target);
+      if (p < 1) requestAnimationFrame(step);
+    });
+  }
+  var counters = document.querySelectorAll('.count');
+  if ('IntersectionObserver' in window) {
+    var cio = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { animateCount(e.target); cio.unobserve(e.target); }
+      });
+    }, { threshold: 0.5 });
+    counters.forEach(function (el) { cio.observe(el); });
+  } else {
+    counters.forEach(animateCount);
+  }
+})();
+</script>
 
 </body>
 </html>
