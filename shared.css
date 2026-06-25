@@ -10,8 +10,8 @@
   --bg-soft: #E3C7BC;
   --accent: #EDB183;
   --accent-deep: #7D5525;
-  --plum: #1E555C;
-  --teal: #F15152;
+  --plum: #F15152;
+  --teal: #1E555C;
   --muted: #6B5A55;
   --shadow: 0 18px 40px rgba(58, 46, 57, 0.15);
 }
@@ -58,11 +58,8 @@ nav.top {
   border-bottom: 1px solid rgba(58, 46, 57, 0.08);
   color: var(--ink);
 }
-nav.top .brand {
-  font-family: "Bitter", Georgia, serif;
-  font-weight: 800; font-size: 22px; letter-spacing: -0.02em;
-}
-nav.top .brand span { color: var(--accent); }
+nav.top .brand { display: flex; align-items: center; }
+nav.top .brand img { height: 38px; width: auto; display: block; }
 nav.top ul {
   display: flex; gap: 26px; list-style: none; font-size: 14px; font-weight: 500;
   flex-wrap: nowrap; min-width: 0; overflow-x: auto;
