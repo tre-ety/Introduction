@@ -5,430 +5,68 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Education — Jio Miguel Ong</title>
 <meta name="description" content="Education of Jio Miguel Ong: BA (Hons) Politics at Queen Mary University of London, with full academic history and module list." />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Jio Miguel Ong" />
+<meta property="og:url" content="https://jiomiguelong.uk/education" />
+<meta property="og:title" content="Education — Jio Miguel Ong" />
+<meta property="og:description" content="BA (Hons) Politics at Queen Mary University of London, with full academic history from Cebu to London." />
+<meta property="og:image" content="https://jiomiguelong.uk/og-image.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Education — Jio Miguel Ong" />
+<meta name="twitter:description" content="BA (Hons) Politics at Queen Mary University of London, with full academic history from Cebu to London." />
+<meta name="twitter:image" content="https://jiomiguelong.uk/og-image.png" />
+<meta name="theme-color" content="#F4D8CD" />
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800;9..144,900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Bitter:ital,wght@0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
 <style>
-  :root {
-    --ink: #0d0d12;
-    --paper: #f3ede2;
-    --paper-soft: #ece4d4;
-    --accent: #ff5c2b;
-    --accent-deep: #d23b0d;
-    --plum: #4a1d57;
-    --teal: #1a6f6a;
-    --gold: #e8b14a;
-  }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
-  body {
-    font-family: "Space Grotesk", -apple-system, system-ui, sans-serif;
-    background: var(--ink);
-    color: var(--paper);
-    line-height: 1.55;
-    overflow-x: hidden;
-    -webkit-font-smoothing: antialiased;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-  }
-  ::selection { background: var(--accent); color: var(--paper); }
-  a { color: inherit; text-decoration: none; }
+  .edu-header { padding: 150px 36px 30px; max-width: 960px; margin: 0 auto; width: 100%; }
+  .edu-header h1 { font-family: "Bitter", Georgia, serif; font-weight: 800; font-size: clamp(40px, 6vw, 78px); line-height: 0.98; letter-spacing: -0.035em; margin-bottom: 20px; }
+  .edu-header h1 em { font-style: italic; font-weight: 400; color: var(--accent); }
+  .edu-header p.lede { font-size: clamp(17px, 1.4vw, 20px); max-width: 640px; color: rgba(244, 216, 205, 0.78); }
 
-  /* =========== NAV =========== */
-  nav.top {
-    position: fixed;
-    top: 0; left: 0; right: 0;
-    z-index: 50;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 18px 36px;
-    background: #f3ede2;
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(13, 13, 18, 0.08);
-    color: var(--ink);
-  }
-  nav.top .brand {
-    font-family: "Fraunces", serif;
-    font-weight: 900;
-    font-size: 22px;
-    letter-spacing: -0.02em;
-  }
-  nav.top .brand span { color: var(--accent); }
-  nav.top ul {
-    display: flex;
-    gap: 28px;
-    list-style: none;
-    font-size: 14px;
-    font-weight: 500;
-    flex-wrap: nowrap;
-    min-width: 0;
-    overflow-x: auto;
-    scrollbar-width: none;
-    -webkit-overflow-scrolling: touch;
-  }
-  nav.top ul::-webkit-scrollbar { display: none; }
-  nav.top ul li { flex: 0 0 auto; }
-  nav.top ul a {
-    position: relative;
-    padding-bottom: 4px;
-    transition: color 0.25s ease;
-  }
-  nav.top ul a::after {
-    content: "";
-    position: absolute;
-    left: 0; bottom: 0;
-    width: 0; height: 2px;
-    background: var(--accent);
-    transition: width 0.3s ease;
-  }
-  nav.top ul a:hover, nav.top ul a.active { color: var(--accent); }
-  nav.top ul a:hover::after, nav.top ul a.active::after { width: 100%; }
+  .edu-timeline { max-width: 960px; margin: 0 auto; padding: 20px 36px 110px; width: 100%; display: flex; flex-direction: column; gap: 20px; }
 
-  /* =========== HEADER =========== */
-  .edu-header {
-    padding: 150px 36px 30px;
-    max-width: 960px;
-    margin: 0 auto;
-    width: 100%;
-  }
-  .edu-header .eyebrow {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    font-family: "JetBrains Mono", monospace;
-    font-size: 13px;
-    text-transform: uppercase;
-    letter-spacing: 0.18em;
-    margin-bottom: 22px;
-    color: var(--gold);
-  }
-  .edu-header .eyebrow .dot {
-    width: 10px; height: 10px;
-    border-radius: 50%;
-    background: var(--accent);
-    animation: pulse 2s ease-in-out infinite;
-  }
-  @keyframes pulse {
-    0%, 100% { opacity: 1; transform: scale(1); }
-    50% { opacity: 0.45; transform: scale(1.4); }
-  }
-  .edu-header h1 {
-    font-family: "Fraunces", serif;
-    font-weight: 800;
-    font-size: clamp(40px, 6vw, 78px);
-    line-height: 0.98;
-    letter-spacing: -0.035em;
-    margin-bottom: 20px;
-  }
-  .edu-header h1 em { font-style: italic; font-weight: 400; color: var(--gold); }
-  .edu-header p.lede {
-    font-size: clamp(17px, 1.4vw, 20px);
-    max-width: 640px;
-    color: rgba(243, 237, 226, 0.78);
-  }
-
-  /* =========== TIMELINE =========== */
-  .edu-timeline {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 20px 36px 110px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  .edu-card {
-    background: rgba(243, 237, 226, 0.06);
-    border: 1px solid rgba(243, 237, 226, 0.18);
-    border-radius: 22px;
-    padding: 34px;
-    transition: transform 0.25s ease, background 0.25s ease;
-  }
-  .edu-card:hover {
-    transform: translateY(-3px);
-    background: rgba(232, 177, 74, 0.10);
-  }
-  .edu-card .when {
-    font-family: "JetBrains Mono", monospace;
-    font-size: 12px;
-    color: var(--gold);
-    margin-bottom: 12px;
-    letter-spacing: 0.1em;
-  }
-  .edu-card h3 {
-    font-family: "Fraunces", serif;
-    font-size: 27px;
-    font-weight: 700;
-    margin-bottom: 6px;
-    line-height: 1.2;
-  }
-  .edu-card .institution {
-    font-size: 15px;
-    opacity: 0.78;
-    margin-bottom: 16px;
-  }
+  .edu-card { background: rgba(244, 216, 205, 0.06); border: 1px solid rgba(244, 216, 205, 0.18); border-radius: 22px; padding: 34px; transition: transform 0.25s ease, background 0.25s ease; }
+  .edu-card:hover { transform: translateY(-3px); background: rgba(237, 177, 131, 0.10); }
+  .edu-card .when { font-size: 12px; font-weight: 600; color: var(--accent); margin-bottom: 12px; letter-spacing: 0.06em; }
+  .edu-card h3 { font-family: "Bitter", Georgia, serif; font-size: 27px; font-weight: 700; margin-bottom: 6px; line-height: 1.2; }
+  .edu-card .institution { font-size: 15px; opacity: 0.78; margin-bottom: 16px; }
   .edu-card .badges { display: flex; flex-wrap: wrap; gap: 8px; }
-  .edu-card .achievement {
-    display: inline-block;
-    background: var(--accent);
-    color: var(--paper);
-    padding: 5px 12px;
-    border-radius: 999px;
-    font-size: 12px;
-    font-weight: 600;
-    font-family: "JetBrains Mono", monospace;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-  }
-  .edu-card .achievement.alt { background: var(--gold); color: var(--ink); }
-  .edu-card .achievement.ghost { background: transparent; color: var(--paper); border: 1px solid rgba(243,237,226,0.35); }
-
-  .edu-card .dissertation {
-    margin-top: 18px;
-    padding-top: 18px;
-    border-top: 1px dashed rgba(243, 237, 226, 0.18);
-    font-size: 14px;
-    color: rgba(243, 237, 226, 0.78);
-  }
-  .edu-card .dissertation strong {
-    color: var(--paper);
-    display: block;
-    margin-bottom: 4px;
-    font-family: "Fraunces", serif;
-    font-weight: 600;
-    font-size: 15px;
-  }
-
-  /* modules / subjects */
-  .modules {
-    margin-top: 20px;
-    padding-top: 18px;
-    border-top: 1px dashed rgba(243, 237, 226, 0.18);
-  }
-  .modules .mlabel {
-    font-family: "JetBrains Mono", monospace;
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 0.16em;
-    color: var(--gold);
-    margin: 14px 0 10px;
-  }
+  .edu-card .achievement { display: inline-block; padding: 5px 12px; border-radius: 4px; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; }
+  .edu-card .achievement { background: var(--teal); color: var(--ink); }
+  .edu-card .achievement.alt { background: var(--accent); color: var(--ink); }
+  .edu-card .achievement.ghost { background: transparent; color: var(--bg); border: 1px solid rgba(244, 216, 205, 0.35); }
+  .edu-card .dissertation { margin-top: 18px; padding-top: 18px; border-top: 1px dashed rgba(244, 216, 205, 0.18); font-size: 14px; color: rgba(244, 216, 205, 0.78); }
+  .edu-card .dissertation strong { color: var(--bg); display: block; margin-bottom: 4px; font-family: "Bitter", Georgia, serif; font-weight: 600; font-size: 15px; }
+  .modules { margin-top: 20px; padding-top: 18px; border-top: 1px dashed rgba(244, 216, 205, 0.18); }
+  .modules .mlabel { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); margin: 14px 0 10px; }
   .modules .mlabel:first-child { margin-top: 0; }
   .chips { display: flex; flex-wrap: wrap; gap: 8px; }
-  .chip {
-    font-size: 12.5px;
-    line-height: 1.3;
-    padding: 7px 13px;
-    border-radius: 999px;
-    background: rgba(243, 237, 226, 0.08);
-    border: 1px solid rgba(243, 237, 226, 0.16);
-    color: rgba(243, 237, 226, 0.92);
-  }
+  .chip { font-size: 12.5px; line-height: 1.3; padding: 7px 13px; border-radius: 4px; background: rgba(244, 216, 205, 0.08); border: 1px solid rgba(244, 216, 205, 0.16); color: rgba(244, 216, 205, 0.92); }
 
-  /* =========== FOOTER =========== */
-  footer {
-    margin-top: auto;
-    padding: 36px;
-    text-align: center;
-    background: var(--ink);
-    border-top: 1px solid rgba(243, 237, 226, 0.12);
-    font-family: "JetBrains Mono", monospace;
-    font-size: 12px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: rgba(243, 237, 226, 0.5);
-  }
-  footer span { color: var(--gold); }
-
-  @media (max-width: 900px) {
-    nav.top { padding: 14px 20px; }
-    nav.top ul { gap: 14px; font-size: 13px; }    .edu-header { padding: 120px 20px 20px; }
-    .edu-timeline { padding: 20px 20px 70px; }
-    .edu-card { padding: 26px; }
-  }
+  @media (max-width: 900px) { .edu-header { padding: 120px 20px 20px; } .edu-timeline { padding: 20px 20px 70px; } .edu-card { padding: 26px; } }
 </style>
 </head>
-<body>
-
-<nav class="top">
-  <a href="/" class="brand">J<span>M</span><span style="color:#1a6f6a">O</span></a>
-  <ul>
-    <li><a href="/">About</a></li>
-    <li><a href="/experience">Experience</a></li>
-    <li><a href="/education" class="active">Education</a></li>
-    <li><a href="/photography">Photography</a></li>
-    <li><a href="/socials">Socials</a></li>
-  </ul>
-</nav>
-
-<header class="edu-header">
-  <div class="eyebrow"><span class="dot"></span> Education</div>
-  <h1>An academic <em>journey</em>, Cebu to London.</h1>
-  <p class="lede">My full education history, from primary school in the Philippines to a final-year Politics degree at Queen Mary University of London, with the modules and subjects studied at each stage.</p>
-</header>
-
-<main class="edu-timeline">
-
-  <article class="edu-card">
-    <div class="when">Sep 2023 &mdash; Jun 2026</div>
-    <h3>BA (Hons) Politics</h3>
-    <div class="institution">Queen Mary University of London &middot; London, United Kingdom</div>
-    <div class="badges">
-      <span class="achievement">Graduated 2026</span>
-      <span class="achievement alt">Pending First Class Classification</span>
-    </div>
-    <div class="dissertation">
-      <strong>Dissertation</strong>
-      Disinformation, Political Predispositions, and Memory Politics: Explaining Voter Perceptions in the 2022 Philippine Presidential Election. A qualitative single-case study advancing an original convergence model of digital narrative circulation, predispositional filtering and mnemonic framing.
-    </div>
-    <div class="modules">
-      <div class="mlabel">Year One Modules</div>
-      <div class="chips">
-        <span class="chip">Politics in Action</span>
-        <span class="chip">Global Histories</span>
-        <span class="chip">Political Analysis</span>
-        <span class="chip">Introduction to International Relations</span>
-        <span class="chip">Thinking Politically: Concepts, Theories and Ideologies</span>
-      </div>
-      <div class="mlabel">Year Two Modules</div>
-      <div class="chips">
-        <span class="chip">Politics of International Law</span>
-        <span class="chip">Modern Political Thought 1</span>
-        <span class="chip">Modern Political Thought 2</span>
-        <span class="chip">Quantitative Methods for Social Science Research</span>
-        <span class="chip">International Relations Theory</span>
-        <span class="chip">Comparative Politics</span>
-      </div>
-      <div class="mlabel">Year Three Modules</div>
-      <div class="chips">
-        <span class="chip">Civil Society: Democracy, Activism and Social Change</span>
-        <span class="chip">Migration and the Politics of Belonging</span>
-        <span class="chip">The Politics of Southeast Asia</span>
-        <span class="chip">Civil Society Internship</span>
-        <span class="chip">Dissertation in Politics / International Relations</span>
-      </div>
-    </div>
-  </article>
-
-  <article class="edu-card">
-    <div class="when">Sep 2022 &mdash; Jul 2023</div>
-    <h3>International Foundation Certificate in Economics and Finance</h3>
-    <div class="institution">Queen Mary University of London &middot; London, United Kingdom</div>
-    <div class="badges">
-      <span class="achievement">Graduated 2023</span>
-      <span class="achievement alt">2:1 / Merit</span>
-    </div>
-    <div class="modules">
-      <div class="mlabel">Modules</div>
-      <div class="chips">
-        <span class="chip">English Language and Study Skills</span>
-        <span class="chip">Pure Mathematics for Economics</span>
-        <span class="chip">Statistics for Economics</span>
-        <span class="chip">Microeconomics</span>
-        <span class="chip">Macroeconomics</span>
-        <span class="chip">Introduction to Business and Management</span>
-        <span class="chip">Management</span>
-        <span class="chip">Independent Study Project</span>
-      </div>
-    </div>
-  </article>
-
-  <article class="edu-card">
-    <div class="when">2020 &mdash; 2022</div>
-    <h3>Senior High School &middot; Accountancy, Business &amp; Management</h3>
-    <div class="institution">Sacred Heart School &mdash; Ateneo de Cebu &middot; Mandaue City, Philippines</div>
-    <div class="badges">
-      <span class="achievement">Graduated 2022</span>
-      <span class="achievement alt">General Average 95</span>
-    </div>
-    <div class="modules">
-      <div class="mlabel">Specialised (ABM) Subjects</div>
-      <div class="chips">
-        <span class="chip">Fundamentals of Accountancy, Business and Management 1 &amp; 2</span>
-        <span class="chip">Organisation and Management</span>
-        <span class="chip">Applied Economics</span>
-        <span class="chip">Business Mathematics</span>
-        <span class="chip">Business Finance</span>
-        <span class="chip">Principles of Marketing</span>
-        <span class="chip">Business Chinese</span>
-      </div>
-      <div class="mlabel">Applied &amp; Core Subjects</div>
-      <div class="chips">
-        <span class="chip">Practical Research 1 &amp; 2</span>
-        <span class="chip">English for Academic and Professional Purposes</span>
-        <span class="chip">Empowerment Technologies (ICT)</span>
-        <span class="chip">Entrepreneurship</span>
-        <span class="chip">Statistics and Probability</span>
-        <span class="chip">Understanding Culture, Society and Politics</span>
-        <span class="chip">Media and Information Literacy</span>
-        <span class="chip">Personal Development</span>
-      </div>
-    </div>
-  </article>
-
-  <article class="edu-card">
-    <div class="when">2016 &mdash; 2020</div>
-    <h3>Junior High School</h3>
-    <div class="institution">University of San Jose-Recoletos &middot; Cebu City, Philippines</div>
-    <div class="badges">
-      <span class="achievement">Graduated 2020</span>
-      <span class="achievement alt">General Average 92</span>
-    </div>
-    <div class="modules">
-      <div class="mlabel">Subjects</div>
-      <div class="chips">
-        <span class="chip">English</span>
-        <span class="chip">Filipino</span>
-        <span class="chip">Mathematics</span>
-        <span class="chip">Science and Technology</span>
-        <span class="chip">Araling Panlipunan</span>
-        <span class="chip">Christian Living Formation</span>
-        <span class="chip">Music</span>
-        <span class="chip">Arts</span>
-        <span class="chip">Physical Education</span>
-        <span class="chip">Health</span>
-        <span class="chip">Technology and Livelihood Education</span>
-      </div>
-    </div>
-  </article>
-
-  <article class="edu-card">
-    <div class="when">2010 &mdash; 2016</div>
-    <h3>Elementary Education</h3>
-    <div class="institution">University of San Jose-Recoletos &middot; Cebu City, Philippines</div>
-    <div class="badges">
-      <span class="achievement">Graduated 2016</span>
-      <span class="achievement alt">General Average 94</span>
-    </div>
-    <div class="modules">
-      <div class="mlabel">Subjects</div>
-      <div class="chips">
-        <span class="chip">Mathematics</span>
-        <span class="chip">Science</span>
-        <span class="chip">English</span>
-        <span class="chip">Filipino</span>
-        <span class="chip">Araling Panlipunan (Social Studies)</span>
-        <span class="chip">Values and Religious Education</span>
-        <span class="chip">Edukasyon sa Pagpapakatao (ESP)</span>
-        <span class="chip">Music</span>
-        <span class="chip">Arts</span>
-        <span class="chip">Physical Education</span>
-        <span class="chip">Health</span>
-        <span class="chip">Technology and Livelihood Education (TLE)</span>
-      </div>
-    </div>
-  </article>
-
+<body class="dark full-height">
+<a href="#main" class="skip-link">Skip to main content</a>
+<nav class="top" aria-label="Main"><a href="/" class="brand">J<span>M</span>O</a><ul><li><a href="/">About</a></li><li><a href="/experience">Experience</a></li><li><a href="/education" aria-current="page">Education</a></li><li><a href="/photography">Photography</a></li><li><a href="/socials">Socials</a></li></ul></nav>
+<main id="main">
+<header class="edu-header"><h1>An academic <em>journey</em>, Cebu to London.</h1><p class="lede">My full education history, from primary school in the Philippines to a final-year Politics degree at Queen Mary University of London, with the modules and subjects studied at each stage.</p></header>
+<section class="edu-timeline" aria-label="Education history">
+  <h2 class="sr-only">Qualifications</h2>
+  <article class="edu-card"><div class="when">Sep 2023 &mdash; Jun 2026</div><h3>BA (Hons) Politics</h3><div class="institution">Queen Mary University of London &middot; London, United Kingdom</div><div class="badges"><span class="achievement">Graduated 2026</span><span class="achievement alt">Pending First Class Classification</span></div><div class="dissertation"><strong>Dissertation</strong>Disinformation, Political Predispositions, and Memory Politics: Explaining Voter Perceptions in the 2022 Philippine Presidential Election. A qualitative single-case study advancing an original convergence model of digital narrative circulation, predispositional filtering and mnemonic framing.</div><div class="modules"><div class="mlabel">Year One Modules</div><div class="chips"><span class="chip">Politics in Action</span><span class="chip">Global Histories</span><span class="chip">Political Analysis</span><span class="chip">Introduction to International Relations</span><span class="chip">Thinking Politically: Concepts, Theories and Ideologies</span></div><div class="mlabel">Year Two Modules</div><div class="chips"><span class="chip">Politics of International Law</span><span class="chip">Modern Political Thought 1</span><span class="chip">Modern Political Thought 2</span><span class="chip">Quantitative Methods for Social Science Research</span><span class="chip">International Relations Theory</span><span class="chip">Comparative Politics</span></div><div class="mlabel">Year Three Modules</div><div class="chips"><span class="chip">Civil Society: Democracy, Activism and Social Change</span><span class="chip">Migration and the Politics of Belonging</span><span class="chip">The Politics of Southeast Asia</span><span class="chip">Civil Society Internship</span><span class="chip">Dissertation in Politics / International Relations</span></div></div></article>
+  <article class="edu-card"><div class="when">Sep 2022 &mdash; Jul 2023</div><h3>International Foundation Certificate in Economics and Finance</h3><div class="institution">Queen Mary University of London &middot; London, United Kingdom</div><div class="badges"><span class="achievement">Graduated 2023</span><span class="achievement alt">2:1 / Merit</span></div><div class="modules"><div class="mlabel">Modules</div><div class="chips"><span class="chip">English Language and Study Skills</span><span class="chip">Pure Mathematics for Economics</span><span class="chip">Statistics for Economics</span><span class="chip">Microeconomics</span><span class="chip">Macroeconomics</span><span class="chip">Introduction to Business and Management</span><span class="chip">Management</span><span class="chip">Independent Study Project</span></div></div></article>
+  <article class="edu-card"><div class="when">2020 &mdash; 2022</div><h3>Senior High School &middot; Accountancy, Business &amp; Management</h3><div class="institution">Sacred Heart School &mdash; Ateneo de Cebu &middot; Mandaue City, Philippines</div><div class="badges"><span class="achievement">Graduated 2022</span><span class="achievement alt">General Average 95</span></div><div class="modules"><div class="mlabel">Specialised (ABM) Subjects</div><div class="chips"><span class="chip">Fundamentals of Accountancy, Business and Management 1 &amp; 2</span><span class="chip">Organisation and Management</span><span class="chip">Applied Economics</span><span class="chip">Business Mathematics</span><span class="chip">Business Finance</span><span class="chip">Principles of Marketing</span><span class="chip">Business Chinese</span></div><div class="mlabel">Applied &amp; Core Subjects</div><div class="chips"><span class="chip">Practical Research 1 &amp; 2</span><span class="chip">English for Academic and Professional Purposes</span><span class="chip">Empowerment Technologies (ICT)</span><span class="chip">Entrepreneurship</span><span class="chip">Statistics and Probability</span><span class="chip">Understanding Culture, Society and Politics</span><span class="chip">Media and Information Literacy</span><span class="chip">Personal Development</span></div></div></article>
+  <article class="edu-card"><div class="when">2016 &mdash; 2020</div><h3>Junior High School</h3><div class="institution">University of San Jose-Recoletos &middot; Cebu City, Philippines</div><div class="badges"><span class="achievement">Graduated 2020</span><span class="achievement alt">General Average 92</span></div><div class="modules"><div class="mlabel">Subjects</div><div class="chips"><span class="chip">English</span><span class="chip">Filipino</span><span class="chip">Mathematics</span><span class="chip">Science and Technology</span><span class="chip">Araling Panlipunan</span><span class="chip">Christian Living Formation</span><span class="chip">Music</span><span class="chip">Arts</span><span class="chip">Physical Education</span><span class="chip">Health</span><span class="chip">Technology and Livelihood Education</span></div></div></article>
+  <article class="edu-card"><div class="when">2010 &mdash; 2016</div><h3>Elementary Education</h3><div class="institution">University of San Jose-Recoletos &middot; Cebu City, Philippines</div><div class="badges"><span class="achievement">Graduated 2016</span><span class="achievement alt">General Average 94</span></div><div class="modules"><div class="mlabel">Subjects</div><div class="chips"><span class="chip">Mathematics</span><span class="chip">Science</span><span class="chip">English</span><span class="chip">Filipino</span><span class="chip">Araling Panlipunan (Social Studies)</span><span class="chip">Values and Religious Education</span><span class="chip">Edukasyon sa Pagpapakatao (ESP)</span><span class="chip">Music</span><span class="chip">Arts</span><span class="chip">Physical Education</span><span class="chip">Health</span><span class="chip">Technology and Livelihood Education (TLE)</span></div></div></article>
+</section>
 </main>
-
-<footer>
-  &copy; 2026 Jio Miguel Ong &middot; Designed and built in <span>London</span>
-</footer>
-
+<footer>&copy; 2026 Jio Miguel Ong &middot; Designed and built in <span>London</span></footer>
+<style>.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }</style>
 </body>
 </html>

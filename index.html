@@ -3,742 +3,348 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Jio Miguel Ong</title>
-<meta name="description" content="Personal site of Jio Miguel Ong: strategy and product associate, Politics graduate of Queen Mary University of London, strategic communications professional, community organiser and open-source investigator based in London." />
+<title>Jio Miguel Ong — Strategy &amp; Product, Communications and Community Organising</title>
+<meta name="description" content="Personal site of Jio Miguel Ong: strategy and product trainee, Politics graduate of Queen Mary University of London, strategic communications professional, community organiser and open-source investigator based in London." />
+<link rel="canonical" href="https://jiomiguelong.uk/" />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Jio Miguel Ong" />
+<meta property="og:url" content="https://jiomiguelong.uk/" />
+<meta property="og:title" content="Jio Miguel Ong — Strategy &amp; Product, Communications &amp; Organising" />
+<meta property="og:description" content="Strategy and product trainee and Politics graduate of Queen Mary University of London. I turn research into roadmaps, campaigns that hold power to account, and communications that persuade." />
+<meta property="og:image" content="https://jiomiguelong.uk/og-image.png" />
+<meta property="og:image:width" content="925" />
+<meta property="og:image:height" content="486" />
+<meta property="og:image:alt" content="Jio Miguel Ong — strategy and product, communications and organising." />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Jio Miguel Ong — Strategy &amp; Product, Communications &amp; Organising" />
+<meta name="twitter:description" content="Strategy and product trainee and Politics graduate of QMUL. Research into roadmaps, campaigns that hold power to account, communications that persuade." />
+<meta name="twitter:image" content="https://jiomiguelong.uk/og-image.png" />
+<meta name="theme-color" content="#F4D8CD" />
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800;9..144,900&family=JetBrains+Mono:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Bitter:ital,wght@0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Jio Miguel Ong",
+  "url": "https://jiomiguelong.uk/",
+  "image": "https://jiomiguelong.uk/og-image.png",
+  "jobTitle": "Strategy & Product Management Trainee",
+  "worksFor": { "@type": "Organization", "name": "CIRQL" },
+  "alumniOf": { "@type": "CollegeOrUniversity", "name": "Queen Mary University of London" },
+  "homeLocation": { "@type": "Place", "name": "London, United Kingdom" },
+  "knowsLanguage": ["English", "Tagalog", "Cebuano", "Spanish"],
+  "sameAs": [
+    "https://www.linkedin.com/in/jiomiguelong",
+    "https://www.instagram.com/gorjiouss/",
+    "https://x.com/surjionn"
+  ]
+}
+</script>
 <style>
-  :root {
-    --ink: #0d0d12;
-    --paper: #f3ede2;
-    --paper-soft: #ece4d4;
-    --accent: #ff5c2b;
-    --accent-deep: #d23b0d;
-    --plum: #4a1d57;
-    --teal: #1a6f6a;
-    --gold: #e8b14a;
-    --line: #1a1a22;
-    --shadow: 0 18px 40px rgba(13, 13, 18, 0.18);
-  }
-
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-
-  html { scroll-behavior: smooth; }
-
-  body {
-    font-family: "Space Grotesk", -apple-system, system-ui, sans-serif;
-    background: var(--paper);
-    color: var(--ink);
-    line-height: 1.55;
-    overflow-x: hidden;
-    -webkit-font-smoothing: antialiased;
-  }
-
-  ::selection { background: var(--accent); color: var(--paper); }
-
-  a { color: inherit; text-decoration: none; }
-
-  /* =========== NAV =========== */
-  nav.top {
-    position: fixed;
-    top: 0; left: 0; right: 0;
-    z-index: 50;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 18px 36px;
-    background: rgba(243, 237, 226, 0.85);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(13, 13, 18, 0.08);
-  }
-  nav.top .brand {
-    font-family: "Fraunces", serif;
-    font-weight: 900;
-    font-size: 22px;
-    letter-spacing: -0.02em;
-  }
-  nav.top .brand span { color: var(--accent); }
-  nav.top ul {
-    display: flex;
-    gap: 28px;
-    list-style: none;
-    font-size: 14px;
-    font-weight: 500;
-    flex-wrap: nowrap;
-    min-width: 0;
-    overflow-x: auto;
-    scrollbar-width: none;
-    -webkit-overflow-scrolling: touch;
-  }
-  nav.top ul::-webkit-scrollbar { display: none; }
-  nav.top ul li { flex: 0 0 auto; }
-  nav.top ul a {
-    position: relative;
-    padding-bottom: 4px;
-    transition: color 0.25s ease;
-  }
-  nav.top ul a::after {
-    content: "";
-    position: absolute;
-    left: 0; bottom: 0;
-    width: 0; height: 2px;
-    background: var(--accent);
-    transition: width 0.3s ease;
-  }
-  nav.top ul a:hover { color: var(--accent); }
-  nav.top ul a:hover::after { width: 100%; }
-
   /* =========== HERO =========== */
   .hero {
-    min-height: 100vh;
-    padding: 140px 36px 80px;
-    display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
-    gap: 60px;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
-  }
-  .hero::before {
-    content: "";
-    position: absolute;
-    top: 10%;
-    right: -180px;
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, var(--accent) 0%, transparent 70%);
-    opacity: 0.18;
-    border-radius: 50%;
-    animation: drift 14s ease-in-out infinite;
-  }
-  .hero::after {
-    content: "";
-    position: absolute;
-    bottom: -120px;
-    left: -120px;
-    width: 420px;
-    height: 420px;
-    background: radial-gradient(circle, var(--plum) 0%, transparent 70%);
-    opacity: 0.22;
-    border-radius: 50%;
-    animation: drift 18s ease-in-out infinite reverse;
-  }
-  @keyframes drift {
-    0%, 100% { transform: translate(0, 0) scale(1); }
-    50% { transform: translate(40px, -30px) scale(1.08); }
+    min-height: 92vh; padding: 132px 36px 70px;
+    display: grid; grid-template-columns: 1.2fr 0.8fr;
+    gap: 60px; align-items: center; position: relative;
+    max-width: 1320px; margin: 0 auto;
   }
 
   .hero-text { position: relative; z-index: 2; }
-  .hero-eyebrow {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    font-family: "JetBrains Mono", monospace;
-    font-size: 13px;
-    text-transform: uppercase;
-    letter-spacing: 0.18em;
-    margin-bottom: 24px;
-    color: var(--accent-deep);
-  }
-  .hero-eyebrow .dot {
-    width: 10px; height: 10px;
-    border-radius: 50%;
-    background: var(--accent);
-    animation: pulse 2s ease-in-out infinite;
-  }
-  @keyframes pulse {
-    0%, 100% { opacity: 1; transform: scale(1); }
-    50% { opacity: 0.45; transform: scale(1.4); }
+  .hero-subtitle {
+    font-size: 14px; font-weight: 600; text-transform: uppercase;
+    letter-spacing: 0.08em; margin-bottom: 24px; color: var(--plum);
   }
 
   .hero h1 {
-    font-family: "Fraunces", serif;
-    font-weight: 900;
-    font-size: clamp(48px, 8vw, 116px);
-    line-height: 0.92;
-    letter-spacing: -0.035em;
-    margin-bottom: 28px;
+    font-family: "Bitter", Georgia, serif;
+    font-weight: 800; font-size: clamp(46px, 7.4vw, 96px);
+    line-height: 1.0; letter-spacing: -0.035em; margin-bottom: 26px;
   }
-  .hero h1 em {
-    font-style: italic;
-    font-weight: 400;
-    color: var(--accent);
-  }
-  .hero h1 .underline {
-    position: relative;
-    display: inline-block;
-  }
+  .hero h1 em { font-style: italic; font-weight: 400; color: var(--plum); }
+  .hero h1 .underline { position: relative; display: inline-block; }
   .hero h1 .underline::after {
-    content: "";
-    position: absolute;
-    bottom: 8px; left: 0; right: 0;
-    height: 14px;
-    background: var(--gold);
-    z-index: -1;
-    opacity: 0.7;
+    content: ""; position: absolute;
+    bottom: 6px; left: 0; right: 0; height: 12px;
+    background: var(--accent); z-index: -1; opacity: 0.45;
   }
 
   .hero-lede {
     font-size: clamp(17px, 1.4vw, 21px);
-    max-width: 560px;
-    margin-bottom: 36px;
-    color: rgba(13, 13, 18, 0.78);
+    max-width: 560px; margin-bottom: 34px; color: var(--muted);
   }
 
-  .hero-cta {
-    display: flex;
-    gap: 16px;
-    flex-wrap: wrap;
-  }
+  .hero-cta { display: flex; gap: 14px; flex-wrap: wrap; }
   .btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    padding: 16px 28px;
-    border-radius: 999px;
-    font-weight: 600;
-    font-size: 15px;
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 15px 26px; border-radius: 4px; font-weight: 600; font-size: 15px;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     border: 2px solid var(--ink);
   }
-  .btn-primary {
-    background: var(--ink);
-    color: var(--paper);
-  }
-  .btn-primary:hover {
-    transform: translate(-3px, -3px);
-    box-shadow: 6px 6px 0 var(--accent);
-  }
+  .btn-primary { background: var(--ink); color: var(--bg); }
+  .btn-primary:hover { transform: translate(-3px, -3px); box-shadow: 6px 6px 0 var(--accent); }
   .btn-ghost { background: transparent; }
-  .btn-ghost:hover {
-    transform: translate(-3px, -3px);
-    box-shadow: 6px 6px 0 var(--ink);
-  }
+  .btn-ghost:hover { transform: translate(-3px, -3px); box-shadow: 6px 6px 0 var(--ink); }
   .btn .arrow { transition: transform 0.25s ease; }
   .btn:hover .arrow { transform: translateX(4px); }
 
   .hero-card {
-    position: relative;
-    z-index: 2;
-    background: var(--ink);
-    color: var(--paper);
-    padding: 36px;
-    border-radius: 28px;
-    transform: rotate(2deg);
-    box-shadow: var(--shadow);
+    position: relative; z-index: 2;
+    background: var(--ink); color: var(--bg);
+    padding: 34px; border-radius: 28px;
+    transform: rotate(2deg); box-shadow: var(--shadow);
     transition: transform 0.4s ease;
   }
   .hero-card:hover { transform: rotate(0deg) scale(1.02); }
   .hero-card .label {
-    font-family: "JetBrains Mono", monospace;
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    color: var(--gold);
-    margin-bottom: 18px;
+    font-size: 11px; font-weight: 600; text-transform: uppercase;
+    letter-spacing: 0.12em; color: var(--accent); margin-bottom: 18px;
   }
-  .hero-card h3 {
-    font-family: "Fraunces", serif;
-    font-size: 26px;
-    line-height: 1.15;
-    font-weight: 600;
-    margin-bottom: 22px;
+  .hero-card-title {
+    font-family: "Bitter", Georgia, serif;
+    font-size: 25px; line-height: 1.18; font-weight: 600; margin-bottom: 22px;
   }
   .hero-card .ticker {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-    border-top: 1px solid rgba(243, 237, 226, 0.18);
-    padding-top: 20px;
+    display: flex; flex-direction: column; gap: 14px;
+    border-top: 1px solid rgba(244, 216, 205, 0.18); padding-top: 20px;
   }
   .hero-card .ticker-row {
-    display: flex;
-    justify-content: space-between;
-    font-size: 13px;
-    align-items: baseline;
+    display: flex; justify-content: space-between;
+    font-size: 13px; align-items: baseline; gap: 16px;
   }
-  .hero-card .ticker-row span:first-child { opacity: 0.6; }
+  .hero-card .ticker-row span:first-child { color: rgba(244, 216, 205, 0.6); }
   .hero-card .ticker-row span:last-child {
-    font-family: "JetBrains Mono", monospace;
-    color: var(--gold);
-  }
-
-  /* =========== MARQUEE =========== */
-  .marquee {
-    background: var(--ink);
-    color: var(--paper);
-    overflow: hidden;
-    border-top: 2px solid var(--ink);
-    border-bottom: 2px solid var(--ink);
-    padding: 18px 0;
-    font-family: "Fraunces", serif;
-    font-style: italic;
-    font-size: clamp(28px, 4vw, 56px);
-    letter-spacing: -0.02em;
-  }
-  .marquee-track {
-    display: flex;
-    gap: 60px;
-    animation: scroll 36s linear infinite;
-    white-space: nowrap;
-    width: max-content;
-  }
-  .marquee-track span { display: inline-flex; align-items: center; gap: 60px; }
-  .marquee-track .star { color: var(--accent); }
-  @keyframes scroll {
-    from { transform: translateX(0); }
-    to { transform: translateX(-50%); }
+    color: var(--accent); text-align: right; font-variant-numeric: tabular-nums;
   }
 
   /* =========== SECTION SHARED =========== */
-  section {
-    padding: 110px 36px;
-    max-width: 1280px;
-    margin: 0 auto;
-    position: relative;
-  }
-  .section-tag {
-    font-family: "JetBrains Mono", monospace;
-    font-size: 13px;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    color: var(--accent-deep);
-    margin-bottom: 18px;
-    display: inline-block;
+  section { padding: 104px 36px; max-width: 1280px; margin: 0 auto; position: relative; }
+  .section-head {
+    display: flex; align-items: flex-end; justify-content: space-between;
+    gap: 30px; flex-wrap: wrap; margin-bottom: 52px;
   }
   .section-title {
-    font-family: "Fraunces", serif;
-    font-weight: 800;
-    font-size: clamp(38px, 5vw, 72px);
-    line-height: 1;
-    letter-spacing: -0.03em;
-    margin-bottom: 56px;
-    max-width: 880px;
+    font-family: "Bitter", Georgia, serif;
+    font-weight: 800; font-size: clamp(34px, 4.6vw, 64px);
+    line-height: 1; letter-spacing: -0.03em; max-width: 760px;
   }
-  .section-title em {
-    font-style: italic;
-    font-weight: 400;
-    color: var(--accent);
-  }
+  .section-title em { font-style: italic; font-weight: 400; color: var(--plum); }
 
   /* =========== ABOUT =========== */
-  #about { background: var(--paper); }
-  .about-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 56px;
-    align-items: start;
-  }
-  .about-prose p {
-    font-size: 18px;
-    margin-bottom: 20px;
-    color: rgba(13, 13, 18, 0.84);
-  }
+  #about { background: var(--bg); }
+  #about .section-title { margin-bottom: 56px; }
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
+  .about-prose p { font-size: 18px; margin-bottom: 20px; color: var(--muted); }
+  .about-prose p:last-child { margin-bottom: 0; }
   .about-prose strong { color: var(--ink); font-weight: 600; }
 
   .about-quick {
-    background: var(--paper-soft);
-    border: 2px solid var(--ink);
-    border-radius: 24px;
-    padding: 36px;
-    box-shadow: 8px 8px 0 var(--ink);
-    position: sticky;
-    top: 110px;
+    position: sticky; top: 100px;
+    border-top: 3px solid var(--ink); padding-top: 28px;
   }
   .about-quick h4 {
-    font-family: "Fraunces", serif;
-    font-weight: 700;
-    font-size: 22px;
-    margin-bottom: 22px;
+    font-family: "Bitter", Georgia, serif;
+    font-weight: 700; font-size: 22px; margin-bottom: 22px;
   }
-  .about-quick dl {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 14px 20px;
-    font-size: 15px;
-  }
+  .about-quick dl { display: grid; grid-template-columns: auto 1fr; gap: 14px 20px; font-size: 15px; }
   .about-quick dt {
-    font-family: "JetBrains Mono", monospace;
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
-    color: rgba(13, 13, 18, 0.55);
-    align-self: center;
+    font-size: 11px; font-weight: 600; text-transform: uppercase;
+    letter-spacing: 0.1em; color: var(--muted); align-self: center;
   }
   .about-quick dd { font-weight: 500; }
 
   .pill-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 22px;
+    display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px;
+    padding-top: 22px; border-top: 1px dashed rgba(58, 46, 57, 0.2);
   }
   .pill {
-    background: var(--ink);
-    color: var(--paper);
-    padding: 6px 14px;
-    border-radius: 999px;
-    font-size: 12px;
-    font-family: "JetBrains Mono", monospace;
+    background: var(--ink); color: var(--bg);
+    padding: 6px 14px; border-radius: 4px; font-size: 12px; font-weight: 600;
   }
-  .pill.alt { background: var(--accent); color: var(--paper); }
-  .pill.gold { background: var(--gold); color: var(--ink); }
-  .pill.plum { background: var(--plum); color: var(--paper); }
-  .pill.teal { background: var(--teal); color: var(--paper); }
+  .pill.alt { background: var(--accent); color: var(--ink); }
+  .pill.plum { background: var(--plum); color: var(--bg); }
+  .pill.teal { background: var(--teal); color: var(--ink); }
+  .pill.gold { background: var(--bg-soft); color: var(--ink); border: 1px solid var(--ink); }
 
-  .page-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 22px;
+  /* =========== SELECTED WORK =========== */
+  #work {
+    background: var(--ink); color: var(--bg);
+    border-radius: 40px 40px 0 0; max-width: none; padding: 104px 0 116px;
   }
-  .page-links a {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 10px 18px;
-    border-radius: 999px;
-    border: 2px solid var(--ink);
-    font-weight: 600;
-    font-size: 13px;
-    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease;
-  }
-  .page-links a:hover {
-    background: var(--ink);
-    color: var(--paper);
-    transform: translate(-2px, -2px);
-    box-shadow: 4px 4px 0 var(--accent);
-  }
-  .page-links a .arrow { transition: transform 0.25s ease; }
-  .page-links a:hover .arrow { transform: translateX(3px); }
+  #work .work-inner { max-width: 1280px; margin: 0 auto; padding: 0 36px; }
+  #work .section-title { color: var(--bg); }
+  #work .section-title em { color: var(--accent); }
+  #work .section-sub { font-size: 16px; color: rgba(244, 216, 205, 0.72); max-width: 360px; }
 
-  /* =========== EXPERIENCE / EDUCATION =========== */
-  #experience { background: var(--ink); color: var(--paper); border-radius: 36px 36px 0 0; }
-  #experience .section-tag { color: var(--gold); }
-  #experience .section-title em { color: var(--gold); }
-
-  .timeline {
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
+  .work-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .work-card {
+    position: relative; display: flex; flex-direction: column;
+    background: rgba(244, 216, 205, 0.05);
+    border: 1px solid rgba(244, 216, 205, 0.16);
+    border-radius: 26px; padding: 34px;
+    transition: transform 0.28s ease, background 0.28s ease, border-color 0.28s ease;
   }
-  .role {
-    border: 1px solid rgba(243, 237, 226, 0.18);
-    border-radius: 20px;
-    padding: 28px 32px;
-    display: grid;
-    grid-template-columns: 200px 1fr auto;
-    gap: 24px;
-    align-items: start;
-    transition: background 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
-    cursor: default;
-  }
-  .role:hover {
-    background: rgba(255, 92, 43, 0.08);
+  .work-card:hover {
+    transform: translateY(-5px);
+    background: rgba(237, 177, 131, 0.08);
     border-color: var(--accent);
-    transform: translateX(6px);
   }
-  .role .when {
-    font-family: "JetBrains Mono", monospace;
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    color: var(--gold);
-    padding-top: 4px;
+  .work-card.featured {
+    grid-column: 1 / -1; display: grid;
+    grid-template-columns: 1.15fr 0.85fr; gap: 40px; padding: 44px;
+    background: rgba(244, 216, 205, 0.07);
   }
-  .role .what h3 {
-    font-family: "Fraunces", serif;
-    font-size: 22px;
-    font-weight: 600;
-    margin-bottom: 4px;
-    line-height: 1.2;
-  }
-  .role .what .org {
-    font-size: 14px;
-    opacity: 0.7;
-    margin-bottom: 12px;
-  }
-  .role .what p {
-    font-size: 14.5px;
-    color: rgba(243, 237, 226, 0.78);
-    max-width: 720px;
-  }
-  .role .tag {
-    font-family: "JetBrains Mono", monospace;
-    font-size: 11px;
-    padding: 6px 12px;
-    border-radius: 999px;
-    border: 1px solid rgba(243, 237, 226, 0.3);
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    align-self: start;
-    white-space: nowrap;
-  }
-  .role .tag.organising { background: var(--accent); border-color: var(--accent); color: var(--paper); }
-  .role .tag.comms { background: var(--plum); border-color: var(--plum); color: var(--paper); }
-  .role .tag.osint { background: var(--teal); border-color: var(--teal); color: var(--paper); }
-  .role .tag.hospitality { background: var(--gold); border-color: var(--gold); color: var(--ink); }
-  .role .tag.community { background: rgba(243, 237, 226, 0.12); }
-  .role .tag.ops { background: rgba(243, 237, 226, 0.12); }
+  .work-card.featured:hover { background: rgba(237, 177, 131, 0.1); }
 
-  .group-title {
-    font-family: "JetBrains Mono", monospace;
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    color: var(--gold);
-    margin: 36px 0 12px;
-    padding-top: 28px;
-    border-top: 1px dashed rgba(243, 237, 226, 0.2);
+  .work-tag {
+    align-self: flex-start; font-size: 11px; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.1em;
+    padding: 6px 13px; border-radius: 4px; margin-bottom: 22px;
   }
-  .group-title:first-child { margin-top: 0; padding-top: 0; border-top: none; }
+  .work-tag.strategy { background: var(--accent); color: var(--ink); }
+  .work-tag.policy { background: var(--plum); color: var(--bg); }
+  .work-tag.comms { background: var(--teal); color: var(--ink); }
 
-  /* Education block */
-  .edu-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
-    margin-bottom: 56px;
+  .work-card h3 {
+    font-family: "Bitter", Georgia, serif;
+    font-weight: 700; font-size: 26px; line-height: 1.18;
+    letter-spacing: -0.01em; margin-bottom: 12px;
   }
-  .edu-card {
-    background: rgba(243, 237, 226, 0.06);
-    border: 1px solid rgba(243, 237, 226, 0.18);
-    border-radius: 20px;
-    padding: 32px;
-    transition: transform 0.25s ease, background 0.25s ease;
+  .work-card.featured h3 { font-size: clamp(30px, 3vw, 40px); }
+  .work-card .meta {
+    font-size: 12px; font-weight: 600; letter-spacing: 0.04em;
+    color: var(--accent); margin-bottom: 18px;
   }
-  .edu-card:hover {
-    transform: translateY(-4px);
-    background: rgba(232, 177, 74, 0.12);
+  .work-card p.desc { font-size: 15px; color: rgba(244, 216, 205, 0.8); margin-bottom: 24px; }
+  .work-card.featured p.desc { font-size: 16px; }
+  .work-card .work-link {
+    margin-top: auto; align-self: flex-start;
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 13px; font-weight: 600; color: var(--bg);
+    border-bottom: 1px solid rgba(244, 216, 205, 0.4); padding-bottom: 2px;
+    transition: color 0.2s ease, border-color 0.2s ease;
   }
-  .edu-card .when {
-    font-family: "JetBrains Mono", monospace;
-    font-size: 12px;
-    color: var(--gold);
-    margin-bottom: 14px;
-    letter-spacing: 0.1em;
+  .work-card .work-link:hover { color: var(--accent); border-color: var(--accent); }
+  .work-card .work-link .arrow { transition: transform 0.25s ease; }
+  .work-card .work-link:hover .arrow { transform: translateX(4px); }
+
+  .work-result {
+    background: var(--ink);
+    border: 1px solid rgba(244, 216, 205, 0.18);
+    border-radius: 20px; padding: 30px;
+    display: flex; flex-direction: column; justify-content: center; gap: 18px;
   }
-  .edu-card h3 {
-    font-family: "Fraunces", serif;
-    font-size: 24px;
-    font-weight: 700;
-    margin-bottom: 6px;
-    line-height: 1.2;
+  .result-summary { font-size: 17px; line-height: 1.4; color: var(--bg); }
+  .result-summary strong { color: var(--accent); font-weight: 700; }
+  .result-list {
+    list-style: none; display: flex; flex-direction: column; gap: 10px;
+    border-top: 1px solid rgba(244, 216, 205, 0.16); padding-top: 18px;
   }
-  .edu-card .institution {
-    font-size: 15px;
-    opacity: 0.75;
-    margin-bottom: 16px;
+  .result-list li {
+    font-size: 14px; color: rgba(244, 216, 205, 0.78);
+    padding-left: 18px; position: relative;
   }
-  .edu-card .achievement {
-    display: inline-block;
-    background: var(--accent);
-    color: var(--paper);
-    padding: 5px 12px;
-    border-radius: 999px;
-    font-size: 12px;
-    font-weight: 600;
-    font-family: "JetBrains Mono", monospace;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
+  .result-list li::before {
+    content: ""; position: absolute; left: 2px; top: 8px;
+    width: 6px; height: 6px; border-radius: 50%; background: var(--accent);
   }
-  .edu-card .dissertation {
-    margin-top: 18px;
-    padding-top: 18px;
-    border-top: 1px dashed rgba(243, 237, 226, 0.18);
-    font-size: 14px;
-    color: rgba(243, 237, 226, 0.78);
+
+  .work-outcome {
+    margin-bottom: 22px; padding: 16px 18px; border-radius: 14px;
+    background: rgba(237, 177, 131, 0.12);
+    border: 1px solid rgba(237, 177, 131, 0.3);
   }
-  .edu-card .dissertation strong {
-    color: var(--paper);
-    display: block;
-    margin-bottom: 4px;
-    font-family: "Fraunces", serif;
-    font-weight: 600;
-    font-size: 15px;
+  .work-outcome .ol {
+    font-size: 10px; font-weight: 600; text-transform: uppercase;
+    letter-spacing: 0.12em; color: var(--accent); margin-bottom: 6px;
+  }
+  .work-outcome .ov {
+    font-family: "Bitter", Georgia, serif;
+    font-weight: 700; font-size: 19px; line-height: 1.2; color: var(--bg);
   }
 
   /* =========== CONTACT =========== */
-  #contact {
-    background: var(--paper);
-    text-align: left;
-    padding-bottom: 60px;
-  }
+  #contact { background: var(--bg); padding-top: 96px; padding-bottom: 70px; }
   .contact-shell {
-    background: var(--accent);
-    color: var(--paper);
-    border-radius: 36px;
-    padding: 80px 60px;
-    position: relative;
-    overflow: hidden;
+    background: var(--plum); color: var(--bg);
+    border-radius: 36px; padding: 76px 60px;
+    position: relative; overflow: hidden;
   }
-  .contact-shell::before {
-    content: "";
-    position: absolute;
-    top: -100px; right: -100px;
-    width: 360px; height: 360px;
-    background: var(--plum);
-    border-radius: 50%;
-    opacity: 0.5;
-  }
-  .contact-shell::after {
-    content: "";
-    position: absolute;
-    bottom: -120px; left: -60px;
-    width: 280px; height: 280px;
-    background: var(--gold);
-    border-radius: 50%;
-    opacity: 0.65;
-  }
-  .contact-shell .inner { position: relative; z-index: 2; }
   .contact-shell h2 {
-    font-family: "Fraunces", serif;
-    font-weight: 800;
-    font-size: clamp(40px, 6vw, 92px);
-    line-height: 1;
-    letter-spacing: -0.03em;
-    margin-bottom: 24px;
-    max-width: 900px;
+    font-family: "Bitter", Georgia, serif;
+    font-weight: 800; font-size: clamp(38px, 5.4vw, 82px);
+    line-height: 1; letter-spacing: -0.03em;
+    margin-bottom: 22px; max-width: 900px;
   }
   .contact-shell h2 em { font-style: italic; font-weight: 400; }
-  .contact-shell .lede {
-    font-size: 18px;
-    max-width: 620px;
-    margin-bottom: 44px;
-    opacity: 0.92;
-  }
+  .contact-shell .lede { font-size: 18px; max-width: 600px; margin-bottom: 42px; }
 
-  .contact-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 18px;
-  }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .contact-card .handle { overflow-wrap: anywhere; }
   .contact-card {
-    background: var(--ink);
-    color: var(--paper);
-    padding: 28px;
-    border-radius: 22px;
+    background: var(--ink); color: var(--bg);
+    padding: 26px; border-radius: 22px;
     transition: transform 0.25s ease, box-shadow 0.25s ease;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 160px;
+    display: flex; flex-direction: column; justify-content: space-between;
+    min-height: 158px;
   }
   .contact-card:hover {
     transform: translate(-4px, -4px);
-    box-shadow: 8px 8px 0 var(--paper);
+    box-shadow: 8px 8px 0 var(--bg);
   }
   .contact-card .channel {
-    font-family: "JetBrains Mono", monospace;
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    color: var(--gold);
-    margin-bottom: 10px;
+    font-size: 11px; font-weight: 600; text-transform: uppercase;
+    letter-spacing: 0.12em; color: var(--accent); margin-bottom: 10px;
   }
   .contact-card .handle {
-    font-family: "Fraunces", serif;
-    font-size: 22px;
-    font-weight: 600;
-    line-height: 1.15;
-    word-break: break-word;
+    font-family: "Bitter", Georgia, serif;
+    font-size: 21px; font-weight: 600; line-height: 1.15; word-break: break-word;
   }
   .contact-card .arrow-circle {
-    margin-top: 16px;
-    width: 36px; height: 36px;
-    border-radius: 50%;
-    background: var(--accent);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 16px;
-    transition: transform 0.25s ease;
+    margin-top: 16px; width: 36px; height: 36px; border-radius: 50%;
+    background: var(--accent); display: flex; align-items: center; justify-content: center;
+    font-size: 16px; color: var(--ink); transition: transform 0.25s ease;
   }
   .contact-card:hover .arrow-circle { transform: rotate(-45deg); }
 
-  /* =========== FOOTER =========== */
-  footer {
-    padding: 36px;
-    text-align: center;
-    background: var(--paper);
-    border-top: 1px solid rgba(13, 13, 18, 0.1);
-    font-family: "JetBrains Mono", monospace;
-    font-size: 12px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: rgba(13, 13, 18, 0.55);
-  }
-  footer span { color: var(--accent-deep); }
-
   /* =========== RESPONSIVE =========== */
   @media (max-width: 900px) {
-    nav.top { padding: 14px 20px; }
-    nav.top ul { gap: 16px; font-size: 13px; }    .hero {
-      grid-template-columns: 1fr;
-      padding: 120px 20px 60px;
-      gap: 40px;
-    }
+    .hero { grid-template-columns: 1fr; padding: 116px 20px 56px; gap: 40px; min-height: 0; }
     .hero-card { transform: rotate(0); }
-    section { padding: 70px 20px; }
+    section { padding: 72px 20px; }
+    #work { padding: 72px 0 84px; border-radius: 28px 28px 0 0; }
+    #work .work-inner { padding: 0 20px; }
     .about-grid { grid-template-columns: 1fr; gap: 36px; }
     .about-quick { position: static; }
-    .role {
-      grid-template-columns: 1fr;
-      gap: 12px;
-    }
-    .role .when { font-size: 11px; }
-    .edu-grid { grid-template-columns: 1fr; }
+    .work-grid { grid-template-columns: 1fr; }
+    .work-card.featured { grid-template-columns: 1fr; gap: 26px; padding: 32px; }
     .contact-shell { padding: 50px 26px; }
+    .contact-grid { grid-template-columns: 1fr; }
   }
 
-  /* fade-in on scroll */
-  .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
-  .reveal.in { opacity: 1; transform: translateY(0); }
-
-  /* rotating hero word */
-  .rotate-word {
-    display: inline-block;
-    position: relative;
-    font-style: italic;
-    font-weight: 400;
-    color: var(--accent);
-  }
-  .rotate-word .word {
-    display: inline-block;
-    transition: opacity 0.4s ease, transform 0.4s ease;
-    text-decoration: underline;
-    text-decoration-color: var(--gold);
-    text-decoration-thickness: 0.08em;
-    text-underline-offset: 0.12em;
-  }
-  .rotate-word.swap .word { opacity: 0; transform: translateY(-10px); }
-
-  /* count-up stat colour */
-  .hero-card .ticker-row span:last-child .count { color: #ffd271; font-weight: 800; }
-
-  /* hero card tilt */
-  .hero-card { will-change: transform; }
-
-  @media (prefers-reduced-motion: reduce) {
-    .reveal { opacity: 1 !important; transform: none !important; }
-    .hero::before, .hero::after, .marquee-track,
-    .hero-eyebrow .dot { animation: none !important; }
-    .rotate-word .word { transition: none !important; }
-    html { scroll-behavior: auto; }
-  }
+  /* ponytail: reveal starts visible, JS adds .reveal-ready to opt in */
+  .reveal { transition: opacity 0.7s ease, transform 0.7s ease; }
+  .reveal-ready .reveal { opacity: 0; transform: translateY(26px); }
+  .reveal-ready .reveal.in { opacity: 1; transform: translateY(0); }
 </style>
-<noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+<noscript><style>.reveal-ready .reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
 </head>
 <body>
 
-<nav class="top">
-  <a href="#top" class="brand">J<span>M</span><span style="color:#1a6f6a">O</span></a>
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<nav class="top" aria-label="Main">
+  <a href="/" class="brand">J<span>M</span>O</a>
   <ul>
-    <li><a href="/">About</a></li>
+    <li><a href="/" aria-current="page">About</a></li>
     <li><a href="/experience">Experience</a></li>
     <li><a href="/education">Education</a></li>
     <li><a href="/photography">Photography</a></li>
@@ -746,160 +352,161 @@
   </ul>
 </nav>
 
+<main id="main">
+
 <header class="hero" id="top">
   <div class="hero-text">
-    <div class="hero-eyebrow">
-      <span class="dot"></span>
-      Strategy &amp; product · Based in London, available worldwide
-    </div>
+    <p class="hero-subtitle">Strategy &amp; product · Based in London</p>
     <h1>
-      <span class="underline">Strategy</span>, <em>product</em>, and the politics of what <br><span class="rotate-word"><span class="word">moves</span></span> people.
+      <span class="underline">Strategy</span>, <em>product</em>, and the politics of what <em>moves</em> people.
     </h1>
     <p class="hero-lede">
-      I am Jio Miguel Ong, a strategy and product associate and Politics graduate of Queen Mary University of London. I turn research into roadmaps and analysis into measurable outcomes, working across product, strategic communications, policy and open-source investigation.
+      I am Jio Miguel Ong, a strategy and product trainee and Politics graduate of Queen Mary University of London. I turn research into roadmaps and analysis into measurable outcomes, working across product, strategic communications, policy and open-source investigation.
     </p>
     <div class="hero-cta">
-      <a class="btn btn-primary" href="/assets/Jio-Miguel-Ong-CV.pdf" download="Jio-Miguel-Ong-CV.pdf">Download CV <span class="arrow">&darr;</span></a>
-      <a class="btn btn-ghost" href="/experience">Experience <span class="arrow">&rarr;</span></a>
-      <a class="btn btn-ghost" href="/education">Education <span class="arrow">&rarr;</span></a>
-      <a class="btn btn-ghost" href="/photography">Photography <span class="arrow">&rarr;</span></a>
-      <a class="btn btn-ghost" href="/socials">Socials <span class="arrow">&rarr;</span></a>
+      <a class="btn btn-primary" href="#work">Selected work <span class="arrow">&rarr;</span></a>
+      <a class="btn btn-ghost" href="#contact">Get in touch <span class="arrow">&rarr;</span></a>
     </div>
   </div>
 
   <aside class="hero-card">
-    <div class="label">// Currently</div>
-    <h3>Building product strategy at an early-stage startup, and campaigns that hold power to account.</h3>
+    <div class="label">Currently</div>
+    <p class="hero-card-title">Building product strategy at an early-stage startup, and campaigns that hold power to account.</p>
     <div class="ticker">
       <div class="ticker-row"><span>Now</span><span>Strategy &amp; Product, CIRQL</span></div>
-      <div class="ticker-row"><span>Also</span><span>Strategy Associate, Varaha</span></div>
       <div class="ticker-row"><span>Degree</span><span>BA Politics, QMUL</span></div>
       <div class="ticker-row"><span>Languages</span><span>EN / TL / CEB / ES</span></div>
-      <div class="ticker-row"><span>Latest</span><span><span class="count" data-target="20">0</span>% community growth</span></div>
+      <div class="ticker-row"><span>Latest</span><span>20% community growth</span></div>
     </div>
   </aside>
 </header>
 
-<div class="marquee">
-  <div class="marquee-track">
-    <span>Strategy &amp; Product <span class="star">&#9733;</span> Product Roadmapping <span class="star">&#9733;</span> Market Analysis <span class="star">&#9733;</span> Strategic Communications <span class="star">&#9733;</span> Community Organising <span class="star">&#9733;</span> Open-Source Investigation <span class="star">&#9733;</span> Public Policy <span class="star">&#9733;</span></span>
-    <span>Strategy &amp; Product <span class="star">&#9733;</span> Product Roadmapping <span class="star">&#9733;</span> Market Analysis <span class="star">&#9733;</span> Strategic Communications <span class="star">&#9733;</span> Community Organising <span class="star">&#9733;</span> Open-Source Investigation <span class="star">&#9733;</span> Public Policy <span class="star">&#9733;</span></span>
-  </div>
-</div>
-
 <section id="about">
-  <span class="section-tag reveal">// About</span>
-  <h2 class="section-title reveal">A short <em>introduction</em> to who I am and what I care about.</h2>
-
+  <h2 class="section-title">A short <em>introduction</em> to who I am and what I care about.</h2>
   <div class="about-grid">
-    <div class="about-prose reveal">
-      <p>I work at the meeting point of strategy, product and politics. As a <strong>Strategy and Product Management Associate at CIRQL</strong>, an early-stage startup, I run competitor and market-positioning research using agentic AI tooling, translate user feedback into clearly defined product roadmaps, and drive growth at the coalface, hosting roughly 35 live-streamed events and contributing to <strong>20 per cent community growth</strong> during the platform's early launch. I have also built working fluency in its Flutter, Dart and Firebase architecture, allowing me to contribute to feature scoping and prioritisation.</p>
-
-      <p>I pair that with commercial strategy. As a <strong>Strategy Associate at Varaha Infra Limited</strong>, I interpreted complex coal-pricing, logistics and supply-chain datasets, assessed expansion viability into Madhya Pradesh and Gujarat, and served as the UK-based liaison for investors and external stakeholders, preparing investor-facing briefings that informed executive decision-making.</p>
-
-      <p>That instinct grew out of a political education. I am a <strong>Politics graduate of Queen Mary University of London</strong>, on track for a First Class degree, and my dissertation examines how disinformation, voter predispositions and contested historical memory interacted to shape the 2022 Philippine presidential election.</p>
-
-      <p>Alongside this, I organise in East London with <strong>Citizens UK</strong>, where I helped lead the Victoria and Albert Museum Living Wage campaign and chaired the Safety panel at the Tower Hamlets Issues Workshop, and I serve as <strong>Regional Communications, Media and Public Relations Officer</strong> for St John Ambulance, where I have secured published national press coverage. For the better part of a decade I have also worked as a freelance <strong>open-source investigator</strong>, applying OSINT, source verification and structured reporting for clients across local government and higher education.</p>
-
-      <p>I research, build, write, film and organise. I care about products that earn their users, democratic resilience, dignified work, and communications that persuade rather than merely inform.</p>
+    <div class="about-prose">
+      <p>I work at the meeting point of strategy, product and politics. As a <strong>Strategy and Product Management Trainee at CIRQL</strong>, an early-stage startup, I run competitor and market-positioning research using agentic AI tooling, translate user feedback into clearly defined product roadmaps, and drive growth at the coalface.</p>
+      <p>That product instinct grew out of a political education. I am a <strong>Politics graduate of Queen Mary University of London</strong>, on track for a First Class degree, with a dissertation on how disinformation, voter predispositions and contested historical memory shaped the 2022 Philippine presidential election.</p>
+      <p>Alongside this I organise in East London with <strong>Citizens UK</strong>, serve as <strong>Regional Communications, Media and PR Officer</strong> for St John Ambulance, and have worked for the better part of a decade as a freelance <strong>open-source investigator</strong>. I research, build, write, film and organise.</p>
     </div>
-
-    <aside class="about-quick reveal">
+    <aside class="about-quick">
       <h4>At a glance</h4>
       <dl>
         <dt>Name</dt><dd>Jio Miguel Ong</dd>
-        <dt>Role</dt><dd>Strategy &amp; product associate, Politics graduate</dd>
+        <dt>Role</dt><dd>Strategy &amp; product trainee, Politics graduate</dd>
         <dt>Based</dt><dd>London, United Kingdom</dd>
         <dt>From</dt><dd>Cebu, Philippines</dd>
         <dt>Studies</dt><dd>BA (Hons) Politics, Queen Mary</dd>
       </dl>
-
-      <div class="page-links">
-        <a href="/experience">Experience <span class="arrow">&rarr;</span></a>
-        <a href="/education">Education <span class="arrow">&rarr;</span></a>
-        <a href="/photography">Photography <span class="arrow">&rarr;</span></a>
-        <a href="/socials">Socials <span class="arrow">&rarr;</span></a>
+      <div class="pill-row">
+        <span class="pill alt">Strategy</span>
+        <span class="pill">Product</span>
+        <span class="pill plum">Comms</span>
+        <span class="pill teal">Organising</span>
+        <span class="pill gold">OSINT</span>
       </div>
     </aside>
   </div>
 </section>
 
+<section id="work">
+  <div class="work-inner">
+    <div class="section-head reveal">
+      <div>
+        <h2 class="section-title">Where research turns into <em>outcomes</em>.</h2>
+      </div>
+      <p class="section-sub">A few projects across product, organising and communications — each with a result, not just a remit.</p>
+    </div>
+    <div class="work-grid">
+      <article class="work-card featured reveal">
+        <div class="work-main">
+          <span class="work-tag strategy">Strategy &amp; Product</span>
+          <h3>Driving early-stage growth at a startup, from research to roadmap.</h3>
+          <div class="meta">CIRQL · Strategy &amp; Product Trainee · 2026—Present</div>
+          <p class="desc">I run structured competitor and market-positioning research with agentic AI tooling and translate user feedback into a clearly defined product roadmap. To grow the platform at launch, I produced and hosted live-streamed events, onboarded users directly at events across London, and built supply-side organiser partnerships — while learning the Flutter/Dart/Firebase stack well enough to contribute to feature scoping.</p>
+          <a class="work-link" href="/experience">See the full role <span class="arrow">&rarr;</span></a>
+        </div>
+        <div class="work-result">
+          <p class="result-summary"><strong>20% community growth</strong> during the early launch phase.</p>
+          <ul class="result-list">
+            <li>~35 events produced and hosted</li>
+            <li>50+ users onboarded directly</li>
+            <li>10+ organiser partnerships sourced</li>
+          </ul>
+        </div>
+      </article>
+      <article class="work-card reveal">
+        <span class="work-tag policy">Policy &amp; Organising</span>
+        <div class="work-outcome">
+          <div class="ol">Outcome</div>
+          <div class="ov">Accountability submission delivered to the Mayor of London</div>
+        </div>
+        <h3>The V&amp;A Living Wage campaign, taken to City Hall.</h3>
+        <div class="meta">Citizens UK · TELCO · 2026</div>
+        <p class="desc">Interning with Tower Hamlets' civil-society alliance, I designed and delivered end-to-end campaign communications for the V&amp;A Living Wage initiative — scripting, filming and editing student testimony — and managed turnout and delegate tracking for the Assemblies, chairing the Safety panel at the Issues Workshop.</p>
+        <a class="work-link" href="/experience">See the full role <span class="arrow">&rarr;</span></a>
+      </article>
+      <article class="work-card reveal">
+        <span class="work-tag comms">Communications</span>
+        <div class="work-outcome">
+          <div class="ol">Outcome</div>
+          <div class="ov">Secured published national press coverage</div>
+        </div>
+        <h3>Earning media for first aid and volunteer recruitment.</h3>
+        <div class="meta">St John Ambulance · Regional Comms &amp; PR Officer · 2025—Present</div>
+        <p class="desc">I draft and place press releases for regional and national outlets, field journalist enquiries and coordinate interviews — including securing published coverage for a National Volunteers' Week feature — and produce human-interest, multimedia case studies for broadcast, print and social.</p>
+        <a class="work-link" href="/experience">See the full role <span class="arrow">&rarr;</span></a>
+      </article>
+    </div>
+  </div>
+</section>
 
-<footer>
-  &copy; 2026 Jio Miguel Ong &middot; Designed and built in <span>London</span>
-</footer>
+<section id="contact">
+  <div class="contact-shell">
+    <h2>Let's build something that <em>moves</em> people.</h2>
+    <p class="lede">Open to conversations about strategy and product, communications and campaigns. The fastest way to reach me is email or LinkedIn.</p>
+    <div class="contact-grid">
+      <a class="contact-card" href="mailto:jiomiguelong@outlook.com">
+        <div><div class="channel">Email</div><div class="handle">jiomiguelong@outlook.com</div></div>
+        <div class="arrow-circle">&rarr;</div>
+      </a>
+      <a class="contact-card" href="https://www.linkedin.com/in/jiomiguelong" target="_blank" rel="noopener">
+        <div><div class="channel">LinkedIn</div><div class="handle">in/jiomiguelong</div></div>
+        <div class="arrow-circle">&rarr;</div>
+      </a>
+      <a class="contact-card" href="/experience">
+        <div><div class="channel">Experience</div><div class="handle">Full role history</div></div>
+        <div class="arrow-circle">&rarr;</div>
+      </a>
+      <a class="contact-card" href="/socials">
+        <div><div class="channel">Elsewhere</div><div class="handle">All my channels</div></div>
+        <div class="arrow-circle">&rarr;</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>&copy; 2026 Jio Miguel Ong &middot; Designed and built in <span>London</span></footer>
 
 <script>
-(function () {
-  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  /* Scroll reveal */
-  var reveals = document.querySelectorAll('.reveal');
-  if ('IntersectionObserver' in window && !reduce) {
+  (function () {
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var els = document.querySelectorAll('.reveal');
+    if (reduce || !('IntersectionObserver' in window)) {
+      els.forEach(function (el) { el.classList.add('in'); });
+      return;
+    }
+    // ponytail: add ready class only after observer is set up, so content stays visible if JS breaks
+    document.body.classList.add('reveal-ready');
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) {
         if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
       });
-    }, { threshold: 0.15 });
-    reveals.forEach(function (el) { io.observe(el); });
-  } else {
-    reveals.forEach(function (el) { el.classList.add('in'); });
-  }
-
-  /* Rotating hero word */
-  var rw = document.querySelector('.rotate-word');
-  if (rw && !reduce) {
-    var words = ['moves', 'shapes', 'persuades', 'mobilises'];
-    var wordEl = rw.querySelector('.word');
-    var i = 0;
-    setInterval(function () {
-      rw.classList.add('swap');
-      setTimeout(function () {
-        i = (i + 1) % words.length;
-        wordEl.textContent = words[i];
-        rw.classList.remove('swap');
-      }, 400);
-    }, 2800);
-  }
-
-  /* 3D tilt on the hero card */
-  var card = document.querySelector('.hero-card');
-  if (card && !reduce && window.matchMedia('(hover: hover)').matches) {
-    card.addEventListener('mousemove', function (e) {
-      var r = card.getBoundingClientRect();
-      var px = (e.clientX - r.left) / r.width - 0.5;
-      var py = (e.clientY - r.top) / r.height - 0.5;
-      card.style.transform = 'perspective(900px) rotateX(' + (-py * 6).toFixed(2) +
-        'deg) rotateY(' + (px * 6).toFixed(2) + 'deg) rotate(2deg) scale(1.02)';
-    });
-    card.addEventListener('mouseleave', function () { card.style.transform = ''; });
-  }
-
-  /* Count-up stat */
-  function animateCount(el) {
-    var target = parseInt(el.getAttribute('data-target'), 10) || 0;
-    if (reduce) { el.textContent = target; return; }
-    var dur = 1300, start = null;
-    requestAnimationFrame(function step(ts) {
-      if (!start) start = ts;
-      var p = Math.min((ts - start) / dur, 1);
-      var eased = 1 - Math.pow(1 - p, 3);
-      el.textContent = Math.round(eased * target);
-      if (p < 1) requestAnimationFrame(step);
-    });
-  }
-  var counters = document.querySelectorAll('.count');
-  if ('IntersectionObserver' in window) {
-    var cio = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) {
-        if (e.isIntersecting) { var t = e.target; setTimeout(function () { animateCount(t); }, 650); cio.unobserve(t); }
-      });
-    }, { threshold: 0.5 });
-    counters.forEach(function (el) { cio.observe(el); });
-  } else {
-    counters.forEach(animateCount);
-  }
-})();
+    }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+    els.forEach(function (el) { io.observe(el); });
+  })();
 </script>
 
 </body>

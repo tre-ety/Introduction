@@ -30,7 +30,8 @@ and no frameworks.
 ├── education.html
 ├── photography.html
 ├── socials.html
-├── favicon.ico        # kept at root for the browser default fallback
+├── shared.css          # shared tokens, nav, footer, reset
+├── favicon.ico         # kept at root for the browser default fallback
 ├── CNAME
 ├── assets/
 │   ├── favicon.svg
@@ -45,7 +46,7 @@ and no frameworks.
 
 - HTML5 and modern CSS (Grid, Flexbox, custom properties)
 - Vanilla JavaScript for the gallery and lightbox
-- Google Fonts: Fraunces, Space Grotesk and JetBrains Mono
+- Google Fonts: Bitter and Archivo
 - GitHub Pages for hosting, with a custom domain
 
 ## Running locally
