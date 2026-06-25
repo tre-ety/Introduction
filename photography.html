@@ -55,12 +55,12 @@
   .photo::after {
     content: '';
     position: absolute; inset: 0;
-    background: rgba(233,169,110,0);
+    background: rgba(237,177,131,0);
     transition: background .25s;
     pointer-events: none;
   }
   .photo:hover { transform: translateY(-3px); }
-  .photo:hover::after { background: rgba(233,169,110,.06); }
+  .photo:hover::after { background: rgba(237,177,131,.06); }
   .photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
   .photo { opacity: 0; transform: translateY(16px); transition: opacity .5s ease, transform .5s ease, box-shadow .25s; transition-delay: calc(var(--i, 0) * 35ms); }
   .photo.in { opacity: 1; transform: translateY(0); }
