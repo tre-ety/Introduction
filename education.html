@@ -303,7 +303,7 @@ document.querySelectorAll('.details-toggle').forEach(function(btn) {
     btn.setAttribute('aria-expanded', String(!expanded));
     var target = document.getElementById(btn.getAttribute('aria-controls'));
     if (target) target.classList.toggle('open', !expanded);
-    btn.querySelector('span').textContent = !expanded ? 'Hide modules' : 'Show modules';
+    btn.lastChild.textContent = !expanded ? ' Hide modules' : ' Show modules';
   });
 });
 </script>
