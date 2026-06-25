@@ -1,128 +1,299 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Experience - Jio Miguel Ong</title>
-<meta name="description" content="Full professional experience of Jio Miguel Ong: strategy and product, communications, community organising, open-source research and hospitality leadership." />
-<meta property="og:type" content="website" />
-<meta property="og:site_name" content="Jio Miguel Ong" />
-<meta property="og:url" content="https://jiomiguelong.uk/experience" />
-<meta property="og:title" content="Experience - Jio Miguel Ong" />
-<meta property="og:description" content="Full professional experience: strategy and product, communications, community organising, open-source research and hospitality leadership." />
-<meta property="og:image" content="https://jiomiguelong.uk/og-image.png" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Experience - Jio Miguel Ong" />
-<meta name="twitter:description" content="Full professional experience: strategy and product, communications, community organising, open-source research and hospitality leadership." />
-<meta name="twitter:image" content="https://jiomiguelong.uk/og-image.png" />
-<meta name="theme-color" content="#F4D8CD" />
-<link rel="icon" href="/favicon.ico" sizes="any">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Experience — Jio Miguel Ong</title>
+<meta name="description" content="Full professional experience of Jio Miguel Ong: strategy and product, communications, community organising, open-source research and hospitality leadership.">
+<meta name="theme-color" content="#0D0B0A">
+<meta property="og:title" content="Experience — Jio Miguel Ong">
+<meta property="og:description" content="Full professional experience: strategy and product, communications, community organising.">
+<meta property="og:image" content="https://jiomiguelong.uk/og-image.png">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="canonical" href="https://jiomiguelong.uk/experience">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Bitter:ital,wght@0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,700;0,800;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="shared.css">
 <style>
-  .exp-header { padding: 150px 36px 30px; max-width: 1000px; margin: 0 auto; width: 100%; }
-  .exp-header h1 {
-    font-family: "Bitter", Georgia, serif; font-weight: 800;
-    font-size: clamp(40px, 6vw, 78px); line-height: 0.98;
-    letter-spacing: -0.035em; margin-bottom: 20px;
+  .page-header {
+    padding: 140px 56px 60px;
+    max-width: 1200px; margin: 0 auto; width: 100%;
   }
-  .exp-header h1 em { font-style: italic; font-weight: 400; color: var(--accent); }
-  .exp-header p.lede { font-size: clamp(17px, 1.4vw, 20px); max-width: 660px; color: rgba(244, 216, 205, 0.78); }
+  .page-header h1 {
+    font-family: 'Bitter', Georgia, serif;
+    font-size: clamp(44px, 6.5vw, 88px);
+    font-weight: 800; line-height: .95;
+    letter-spacing: -.035em; margin-bottom: 20px;
+  }
+  .page-header h1 em { font-style: italic; font-weight: 400; color: var(--amber); }
+  .page-header .lede {
+    font-size: clamp(16px, 1.3vw, 18px);
+    color: var(--muted); max-width: 580px; line-height: 1.68;
+    margin-bottom: 28px;
+  }
   .cv-btn {
-    display: inline-flex; align-items: center; gap: 10px; margin-top: 28px;
-    padding: 14px 26px; border-radius: 4px;
-    background: var(--accent); color: var(--ink);
-    font-weight: 600; font-size: 15px; border: 2px solid var(--accent);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 13px 22px;
+    background: var(--amber); color: var(--bg);
+    font-size: 14px; font-weight: 600;
+    border-radius: 4px;
+    transition: opacity .2s, transform .2s;
   }
-  .cv-btn:hover { transform: translate(-3px, -3px); box-shadow: 6px 6px 0 var(--teal); }
-  .cv-btn .ico { transition: transform 0.25s ease; }
-  .cv-btn:hover .ico { transform: translateY(3px); }
+  .cv-btn:hover { opacity: .85; transform: translateY(-1px); }
 
-  .exp-timeline {
-    max-width: 1000px; margin: 0 auto; padding: 16px 36px 110px;
-    width: 100%;
-  }
-  .exp-group-title {
-    font-family: "Bitter", Georgia, serif; font-weight: 700; font-size: 15px;
-    text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent);
-    margin: 46px 0 0; padding-bottom: 12px;
-    border-bottom: 1px solid rgba(244, 216, 205, 0.22);
-  }
-  .exp-group-title:first-child { margin-top: 8px; }
+  .timeline { max-width: 1200px; margin: 0 auto; padding: 0 56px 100px; width: 100%; }
 
-  /* ponytail: timeline entries instead of cards - breaks the card-grid pattern */
-  .exp-entry {
+  .group-title {
+    font-size: 10px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: .16em;
+    color: var(--amber);
+    padding: 40px 0 14px;
+    border-bottom: 1px solid var(--border-mid);
+    margin-bottom: 0;
+  }
+  .group-title:first-child { padding-top: 8px; }
+
+  .entry {
     padding: 28px 0;
-    border-bottom: 1px solid rgba(244, 216, 205, 0.10);
+    border-bottom: 1px solid var(--border);
   }
-  .exp-entry:last-of-type { border-bottom: none; }
-  .exp-entry .top-row { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap; margin-bottom: 4px; }
-  .exp-entry h3 { font-family: "Bitter", Georgia, serif; font-size: 24px; font-weight: 700; line-height: 1.2; }
-  .exp-entry .when { font-size: 12px; font-weight: 600; color: var(--accent); letter-spacing: 0.06em; white-space: nowrap; }
-  .exp-entry .org { font-size: 15px; opacity: 0.78; margin-bottom: 16px; }
-  .exp-entry ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
-  .exp-entry li { position: relative; padding-left: 20px; font-size: 14.5px; color: rgba(244, 216, 205, 0.82); }
-  .exp-entry li::before { content: ""; position: absolute; left: 2px; top: 9px; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
-  .exp-entry .tag {
-    display: inline-block; margin-top: 16px; font-size: 10.5px; font-weight: 600;
-    text-transform: uppercase; letter-spacing: 0.1em; padding: 5px 11px;
-    border-radius: 4px; border: 1px solid rgba(244, 216, 205, 0.25);
-    color: rgba(244, 216, 205, 0.85);
+  .entry:last-of-type { border-bottom: none; }
+  .entry-top {
+    display: flex; justify-content: space-between;
+    align-items: baseline; gap: 20px; flex-wrap: wrap;
+    margin-bottom: 4px;
   }
-  .exp-entry .tag.strategy { background: var(--accent); border-color: var(--accent); color: var(--ink); }
-  .exp-entry .tag.policy { background: var(--plum); border-color: var(--plum); color: var(--bg); }
-  .exp-entry .tag.comms { background: var(--teal); border-color: var(--teal); color: var(--ink); }
-  .exp-entry .tag.osint { background: var(--teal); border-color: var(--teal); color: var(--ink); }
-  .exp-entry .tag.hospitality { background: rgba(237, 177, 131, 0.18); }
-  .exp-entry .tag.community { background: rgba(241, 81, 82, 0.25); }
-  .exp-entry .tag.ops { background: rgba(244, 216, 205, 0.10); }
+  .entry-role {
+    font-family: 'Bitter', Georgia, serif;
+    font-size: 22px; font-weight: 700; line-height: 1.2;
+  }
+  .entry-when {
+    font-size: 11px; font-weight: 700;
+    color: var(--amber); letter-spacing: .06em;
+    white-space: nowrap; flex-shrink: 0;
+  }
+  .entry-org { font-size: 14px; color: var(--muted); margin-bottom: 16px; }
+  .entry-bullets { display: flex; flex-direction: column; gap: 9px; }
+  .entry-bullets li {
+    position: relative; padding-left: 20px;
+    font-size: 14px; line-height: 1.6;
+    color: rgba(240,235,227,.72);
+  }
+  .entry-bullets li::before {
+    content: '';
+    position: absolute; left: 2px; top: 8px;
+    width: 5px; height: 5px;
+    border-radius: 50%; background: var(--amber);
+  }
+  .entry-tag { display: inline-block; margin-top: 16px; }
 
   @media (max-width: 900px) {
-    .exp-header { padding: 120px 20px 20px; }
-    .exp-timeline { padding: 16px 20px 70px; }
+    .page-header { padding: 110px 22px 48px; }
+    .timeline { padding: 0 22px 80px; }
+    .entry-top { flex-direction: column; gap: 4px; }
   }
 </style>
 </head>
-<body class="dark full-height">
+<body>
 <a href="#main" class="skip-link">Skip to main content</a>
-<nav class="top" aria-label="Main">
-  <a href="/" class="brand"><img src="/assets/logo.png" alt="Jio Miguel Ong" height="38"></a>
+
+<nav class="nav" aria-label="Main">
+  <a href="/" class="nav-brand">Jio Miguel Ong</a>
   <ul>
-    <li><a href="/">About</a></li>
-    <li><a href="/experience" aria-current="page">Experience</a></li>
-    <li><a href="/education">Education</a></li>
-    <li><a href="/photography">Photography</a></li>
-    <li><a href="/socials">Socials</a></li>
+    <li><a href="/" class="nav-link">About</a></li>
+    <li><a href="/experience" class="nav-link" aria-current="page">Experience</a></li>
+    <li><a href="/education" class="nav-link">Education</a></li>
+    <li><a href="/photography" class="nav-link">Photography</a></li>
+    <li><a href="/socials" class="nav-link">Socials</a></li>
   </ul>
+  <a href="/assets/Jio-Miguel-Ong-CV.pdf" download class="nav-cv">CV ↓</a>
 </nav>
+
 <main id="main">
-<header class="exp-header">
-  <h1>Every role, in <em>detail</em>.</h1>
-  <p class="lede">A full account of my professional experience, organised as in my CV: strategy, research and advisory work, hospitality leadership, and volunteering and community engagement.</p>
-  <a class="cv-btn" href="/assets/Jio-Miguel-Ong-CV.pdf" download="Jio-Miguel-Ong-CV.pdf">Download CV <span class="ico">&darr;</span></a>
-</header>
-<section class="exp-timeline" aria-label="Experience timeline">
-  <h2 class="exp-group-title">Strategy, Research and Advisory Experience</h2>
-  <article class="exp-entry"><div class="top-row"><h3>Strategy &amp; Product Management Associate</h3><div class="when">Apr 2026 - Present</div></div><div class="org">CIRQL</div><ul><li>Conducted competitor and market-positioning analysis against comparable event-discovery and campus-social platforms using AI tooling (ChatGPT, Gemini, Claude, Cursor, VS Code), surfacing differentiation gaps that recalibrated the 2026 roadmap, deferring the user-acquisition push from June to August to prioritise application development and UI/UX optimisation.</li><li>Built working fluency in the application's Flutter, Dart and Firebase architecture, enabling substantive contribution to feature scoping, technical feasibility assessments and prioritisation discussions.</li><li>Produced and hosted approximately 35 live-streamed events that drove user engagement and platform visibility, contributing to 20 per cent community growth during the application's early launch phase.</li><li>Synthesised user feedback on interface issues, from inconsistent iconography and low-resolution branding to unintuitive go-live and event-selection flows across the CIRQL and Open CIRQL features, into a prioritised design and development programme spanning the interface, landing page and QR-code journey, informing roadmap adjustments ahead of pre-revenue investment rounds.</li><li>Spearheaded user-acquisition efforts through direct networking at live events, onboarding 50+ new users and representing the platform to target audiences across London.</li><li>Sourced and onboarded 10+ event-organiser partnerships, expanding the breadth and quality of listings and strengthening the platform's supply-side ecosystem.</li></ul><span class="tag strategy">Strategy &amp; Product</span></article>
-  <article class="exp-entry"><div class="top-row"><h3>Strategy Associate</h3><div class="when">Jul 2025 - Jun 2026</div></div><div class="org">Varaha Infra Limited</div><ul><li>Managed and interpreted complex commercial datasets in Excel spanning coal pricing, logistics costs and supply-chain volumes, translating raw figures into structured reporting that informed executive oversight and capital-allocation decisions.</li><li>Tracked regulatory, pricing and supply-chain developments across the Indian coal and energy sector from September 2025 to June 2026, accelerating research with AI tooling (ChatGPT, Gemini, Claude) and consolidating findings into structured reports that informed senior leadership's forward planning and risk assessment.</li><li>Assessed expansion viability into Madhya Pradesh and Gujarat and their principal industrial centres, evaluating cost structures, supply-chain economics and state renewable-energy incentives such as electricity-duty exemptions, stamp-duty reimbursements and wheeling-charge waivers, with findings retained by leadership for future consideration.</li><li>Served as the UK-based liaison for investors and external stakeholders, coordinating and preparing bilateral meetings between UK parties and senior leadership travelling from India to sustain continuity of engagement across both markets.</li><li>Prepared briefing materials, summary reports and investor-facing presentation decks, distilling complex commercial information into clear, decision-ready formats.</li></ul><span class="tag strategy">Strategy</span></article>
-  <article class="exp-entry"><div class="top-row"><h3>Regional Communications, Media &amp; Public Relations Officer</h3><div class="when">Oct 2025 - Present</div></div><div class="org">St John Ambulance</div><ul><li>Drafted and placed press releases and editorial content for regional and national outlets, responding to journalist enquiries and coordinating interviews, including securing published coverage in the <em>Enfield Independent</em> for a National Volunteers' Week feature.</li><li>Planned and delivered regional public relations campaigns raising awareness of first aid, health emergencies and community volunteer recruitment across traditional and digital platforms.</li><li>Gathered real-life case studies and produced multi-media materials for local broadcast, print and social channels, ensuring audience-tailored, human-interest storytelling.</li><li>Cultivated relationships with local communities and coordinated with the national St John Ambulance press team to uphold brand consistency, editorial governance and safeguarding standards, including the responsible handling of attributed quotations and content involving vulnerable stakeholders.</li></ul><span class="tag comms">Communications</span></article>
-  <article class="exp-entry"><div class="top-row"><h3>Civil Society Organising Intern</h3><div class="when">Jan 2026 - Apr 2026</div></div><div class="org">Citizens UK &middot; Tower Hamlets (TELCO)</div><ul><li>Advised on and advanced an integrated portfolio of policy priorities spanning the Living Wage, Living Hours, temporary accommodation, ESOL provision, air quality and youth safety across the East London boroughs, coordinating multi-stakeholder engagement among faith institutions, schools, universities, trade unions, councils and grassroots networks.</li><li>Designed and delivered end-to-end campaign communications for the V&amp;A Living Wage initiative, scripting, filming and editing student testimony and supporting the accountability submission to the Mayor of London at Tower Hamlets Town Hall.</li><li>Managed turnout strategy, delegate tracking and operational delivery for the TELCO Delegates Assembly, National Delegates Assembly and Issues Workshop, chairing the Safety panel and deploying CRM-style tracking to monitor engagement.</li></ul><span class="tag policy">Policy &amp; Organising</span></article>
-  <article class="exp-entry"><div class="top-row"><h3>OSINT Analyst</h3><div class="when">Jan 2019 - Jul 2023</div></div><div class="org">Self-employed &middot; Freelance, by contract</div><ul><li>Conducted social media investigations on behalf of a range of client organisations, including local government bodies and academic institutions, producing intelligence products to inform organisational decision-making.</li><li>Developed expertise in open-source research methodologies, refining information-gathering and media-analysis techniques across a sustained period of independent practice.</li><li>Acquired foundational knowledge in cybersecurity disciplines, including penetration testing and operational security, broadening the analytical and technical scope of investigative work undertaken.</li></ul><span class="tag osint">OSINT</span></article>
-  <article class="exp-entry"><div class="top-row"><h3>Social Media Manager</h3><div class="when">Jan 2016 - Mar 2020</div></div><div class="org">University of San Jose-Recoletos &middot; Cebu</div><ul><li>Developed and executed integrated content strategies across multiple student organisations, ensuring consistency with institutional brand guidelines and editorial standards.</li><li>Partnered with internal stakeholders, including the Scouts, Civilian Army and Debate Team, to promote events and drive measurable audience engagement.</li></ul><span class="tag comms">Communications</span></article>
-  <h2 class="exp-group-title">Hospitality</h2>
-  <article class="exp-entry"><div class="top-row"><h3>Chef de Partie</h3><div class="when">Sep 2023 - Sep 2025</div></div><div class="org">Camino; Ib&eacute;rica; The Lockdown Room and The Barre</div><ul><li>Led section operations across high-volume venues, overseeing preparation workflows, service execution and shift handovers while directing demi and commis chef teams.</li><li>Sustained quality and throughput during peak trading by prioritising workload, maintaining cross-section communication and resolving operational issues in real time.</li><li>Administered stock management and supplier coordination to ensure uninterrupted ingredient and equipment availability.</li></ul><span class="tag hospitality">Hospitality</span></article>
-  <article class="exp-entry"><div class="top-row"><h3>Supervisor</h3><div class="when">Mar 2023 - Sep 2023</div></div><div class="org">Five Guys Enterprises</div><ul><li>Promoted to a supervisory remit following completion of a structured operational and compliance certification programme.</li><li>Oversaw front-line team performance during live service, ensuring brand-standard delivery and adherence to health and safety protocols.</li><li>Produced two-week forward rota plans to optimise staffing levels against company performance targets and service KPIs.</li></ul><span class="tag hospitality">Hospitality</span></article>
-  <article class="exp-entry"><div class="top-row"><h3>Business Operations Assistant</h3><div class="when">Jan 2016 - Mar 2022</div></div><div class="org">Taza Mia &amp; Rapid&eacute; &middot; Cebu</div><ul><li>Administered payroll processing and annual leave scheduling via Microsoft Excel, ensuring full compliance with HR legislation and employment standards in Cebu.</li><li>Monitored staff performance metrics and supported data-informed operational decision-making across daily administrative functions.</li></ul><span class="tag ops">Operations</span></article>
-  <h2 class="exp-group-title">Volunteering and Community Engagement</h2>
-  <article class="exp-entry"><div class="top-row"><h3>Volunteer</h3><div class="when">Sep 2025 - Present</div></div><div class="org">St Luke's Community Centre, Islington</div><ul><li>Provided front-of-house and administrative support within a high-footfall community hub, signposting service users to relevant programmes and external referral pathways.</li><li>Supported the planning and operational delivery of large-scale community events, including seasonal festivals and stall management.</li><li>Facilitated daily community programming, including the over-55s Lunch Club, in line with safeguarding standards.</li></ul><span class="tag community">Community</span></article>
-  <article class="exp-entry"><div class="top-row"><h3>PASS Mentor</h3><div class="when">Sep 2023 - Jun 2024</div></div><div class="org">Queen Mary University of London</div><ul><li>Facilitated weekly peer-assisted learning sessions, building academic capability and examination readiness among first-year undergraduates.</li><li>Cultivated an inclusive, collaborative learning environment encouraging independent enquiry and structured problem-solving.</li></ul><span class="tag community">Mentoring</span></article>
-</section>
+
+  <header class="page-header">
+    <p class="eyebrow">Professional history</p>
+    <h1>Every role,<br>in <em>detail</em>.</h1>
+    <p class="lede">A full account of my professional experience, organised as in my CV: strategy, research and advisory work, hospitality leadership, and volunteering and community engagement.</p>
+    <a href="/assets/Jio-Miguel-Ong-CV.pdf" download="Jio-Miguel-Ong-CV.pdf" class="cv-btn">Download CV ↓</a>
+  </header>
+
+  <hr class="rule">
+
+  <section class="timeline" aria-label="Experience timeline">
+
+    <h2 class="group-title">Strategy, Research and Advisory</h2>
+
+    <article class="entry">
+      <div class="entry-top">
+        <h3 class="entry-role">Strategy &amp; Product Management Associate</h3>
+        <span class="entry-when">Apr 2026 – Present</span>
+      </div>
+      <div class="entry-org">CIRQL</div>
+      <ul class="entry-bullets">
+        <li>Conducted competitor and market-positioning analysis against comparable event-discovery and campus-social platforms using AI tooling (ChatGPT, Gemini, Claude, Cursor, VS Code), surfacing differentiation gaps that recalibrated the 2026 roadmap.</li>
+        <li>Built working fluency in the application's Flutter, Dart and Firebase architecture, enabling substantive contribution to feature scoping, technical feasibility assessments and prioritisation discussions.</li>
+        <li>Produced and hosted approximately 35 live-streamed events, contributing to 20 per cent community growth during the application's early launch phase.</li>
+        <li>Synthesised user feedback on interface issues into a prioritised design and development programme spanning the interface, landing page and QR-code journey, informing roadmap adjustments ahead of pre-revenue investment rounds.</li>
+        <li>Spearheaded user-acquisition efforts through direct networking at live events, onboarding 50+ new users and representing the platform to target audiences across London.</li>
+        <li>Sourced and onboarded 10+ event-organiser partnerships, expanding the breadth and quality of listings and strengthening the platform's supply-side ecosystem.</li>
+      </ul>
+      <span class="pill pill-amber entry-tag">Strategy &amp; Product</span>
+    </article>
+
+    <article class="entry">
+      <div class="entry-top">
+        <h3 class="entry-role">Strategy Associate</h3>
+        <span class="entry-when">Jul 2025 – Jun 2026</span>
+      </div>
+      <div class="entry-org">Varaha Infra Limited</div>
+      <ul class="entry-bullets">
+        <li>Managed and interpreted complex commercial datasets in Excel spanning coal pricing, logistics costs and supply-chain volumes, translating raw figures into structured reporting for executive oversight.</li>
+        <li>Tracked regulatory, pricing and supply-chain developments across the Indian coal and energy sector, consolidating findings into structured reports that informed senior leadership's forward planning and risk assessment.</li>
+        <li>Assessed expansion viability into Madhya Pradesh and Gujarat, evaluating cost structures, supply-chain economics and state renewable-energy incentives.</li>
+        <li>Served as the UK-based liaison for investors and external stakeholders, coordinating bilateral meetings between UK parties and senior leadership travelling from India.</li>
+        <li>Prepared briefing materials, summary reports and investor-facing presentation decks, distilling complex commercial information into clear, decision-ready formats.</li>
+      </ul>
+      <span class="pill pill-amber entry-tag">Strategy</span>
+    </article>
+
+    <article class="entry">
+      <div class="entry-top">
+        <h3 class="entry-role">Regional Communications, Media &amp; PR Officer</h3>
+        <span class="entry-when">Oct 2025 – Present</span>
+      </div>
+      <div class="entry-org">St John Ambulance</div>
+      <ul class="entry-bullets">
+        <li>Drafted and placed press releases and editorial content for regional and national outlets, including securing published coverage in the Enfield Independent for a National Volunteers' Week feature.</li>
+        <li>Planned and delivered regional public relations campaigns raising awareness of first aid, health emergencies and community volunteer recruitment.</li>
+        <li>Gathered real-life case studies and produced multi-media materials for local broadcast, print and social channels.</li>
+        <li>Cultivated relationships with local communities and coordinated with the national press team to uphold brand consistency, editorial governance and safeguarding standards.</li>
+      </ul>
+      <span class="pill pill-teal entry-tag">Communications</span>
+    </article>
+
+    <article class="entry">
+      <div class="entry-top">
+        <h3 class="entry-role">Civil Society Organising Intern</h3>
+        <span class="entry-when">Jan 2026 – Apr 2026</span>
+      </div>
+      <div class="entry-org">Citizens UK · Tower Hamlets (TELCO)</div>
+      <ul class="entry-bullets">
+        <li>Advised on and advanced an integrated portfolio of policy priorities spanning the Living Wage, Living Hours, temporary accommodation, ESOL provision, air quality and youth safety across East London boroughs.</li>
+        <li>Designed and delivered end-to-end campaign communications for the V&amp;A Living Wage initiative, scripting, filming and editing student testimony and supporting the accountability submission to the Mayor of London.</li>
+        <li>Managed turnout strategy, delegate tracking and operational delivery for the TELCO Delegates Assembly, National Delegates Assembly and Issues Workshop, chairing the Safety panel.</li>
+      </ul>
+      <span class="pill pill-plum entry-tag">Policy &amp; Organising</span>
+    </article>
+
+    <article class="entry">
+      <div class="entry-top">
+        <h3 class="entry-role">OSINT Analyst</h3>
+        <span class="entry-when">Jan 2019 – Jul 2023</span>
+      </div>
+      <div class="entry-org">Self-employed · Freelance, by contract</div>
+      <ul class="entry-bullets">
+        <li>Conducted social media investigations on behalf of local government bodies and academic institutions, producing intelligence products to inform organisational decision-making.</li>
+        <li>Developed expertise in open-source research methodologies, refining information-gathering and media-analysis techniques across a sustained period of independent practice.</li>
+        <li>Acquired foundational knowledge in cybersecurity disciplines, including penetration testing and operational security.</li>
+      </ul>
+      <span class="pill pill-teal entry-tag">OSINT</span>
+    </article>
+
+    <article class="entry">
+      <div class="entry-top">
+        <h3 class="entry-role">Social Media Manager</h3>
+        <span class="entry-when">Jan 2016 – Mar 2020</span>
+      </div>
+      <div class="entry-org">University of San Jose-Recoletos · Cebu</div>
+      <ul class="entry-bullets">
+        <li>Developed and executed integrated content strategies across multiple student organisations, ensuring consistency with institutional brand guidelines and editorial standards.</li>
+        <li>Partnered with internal stakeholders, including the Scouts, Civilian Army and Debate Team, to promote events and drive measurable audience engagement.</li>
+      </ul>
+      <span class="pill pill-teal entry-tag">Communications</span>
+    </article>
+
+    <h2 class="group-title">Hospitality</h2>
+
+    <article class="entry">
+      <div class="entry-top">
+        <h3 class="entry-role">Chef de Partie</h3>
+        <span class="entry-when">Sep 2023 – Sep 2025</span>
+      </div>
+      <div class="entry-org">Camino · Ibérica · The Lockdown Room and The Barre</div>
+      <ul class="entry-bullets">
+        <li>Led section operations across high-volume venues, overseeing preparation workflows, service execution and shift handovers while directing demi and commis chef teams.</li>
+        <li>Sustained quality and throughput during peak trading by prioritising workload, maintaining cross-section communication and resolving operational issues in real time.</li>
+        <li>Administered stock management and supplier coordination to ensure uninterrupted ingredient and equipment availability.</li>
+      </ul>
+      <span class="pill pill-ghost entry-tag">Hospitality</span>
+    </article>
+
+    <article class="entry">
+      <div class="entry-top">
+        <h3 class="entry-role">Supervisor</h3>
+        <span class="entry-when">Mar 2023 – Sep 2023</span>
+      </div>
+      <div class="entry-org">Five Guys Enterprises</div>
+      <ul class="entry-bullets">
+        <li>Promoted to a supervisory remit following completion of a structured operational and compliance certification programme.</li>
+        <li>Oversaw front-line team performance during live service, ensuring brand-standard delivery and adherence to health and safety protocols.</li>
+        <li>Produced two-week forward rota plans to optimise staffing levels against company performance targets and service KPIs.</li>
+      </ul>
+      <span class="pill pill-ghost entry-tag">Hospitality</span>
+    </article>
+
+    <article class="entry">
+      <div class="entry-top">
+        <h3 class="entry-role">Business Operations Assistant</h3>
+        <span class="entry-when">Jan 2016 – Mar 2022</span>
+      </div>
+      <div class="entry-org">Taza Mia &amp; Rapidé · Cebu</div>
+      <ul class="entry-bullets">
+        <li>Administered payroll processing and annual leave scheduling via Microsoft Excel, ensuring full compliance with HR legislation and employment standards in Cebu.</li>
+        <li>Monitored staff performance metrics and supported data-informed operational decision-making across daily administrative functions.</li>
+      </ul>
+      <span class="pill pill-ghost entry-tag">Operations</span>
+    </article>
+
+    <h2 class="group-title">Volunteering and Community Engagement</h2>
+
+    <article class="entry">
+      <div class="entry-top">
+        <h3 class="entry-role">Volunteer</h3>
+        <span class="entry-when">Sep 2025 – Present</span>
+      </div>
+      <div class="entry-org">St Luke's Community Centre, Islington</div>
+      <ul class="entry-bullets">
+        <li>Provided front-of-house and administrative support within a high-footfall community hub, signposting service users to relevant programmes and external referral pathways.</li>
+        <li>Supported the planning and operational delivery of large-scale community events, including seasonal festivals and stall management.</li>
+        <li>Facilitated daily community programming, including the over-55s Lunch Club, in line with safeguarding standards.</li>
+      </ul>
+      <span class="pill pill-ghost entry-tag">Community</span>
+    </article>
+
+    <article class="entry">
+      <div class="entry-top">
+        <h3 class="entry-role">PASS Mentor</h3>
+        <span class="entry-when">Sep 2023 – Jun 2024</span>
+      </div>
+      <div class="entry-org">Queen Mary University of London</div>
+      <ul class="entry-bullets">
+        <li>Facilitated weekly peer-assisted learning sessions, building academic capability and examination readiness among first-year undergraduates.</li>
+        <li>Cultivated an inclusive, collaborative learning environment encouraging independent enquiry and structured problem-solving.</li>
+      </ul>
+      <span class="pill pill-ghost entry-tag">Mentoring</span>
+    </article>
+
+  </section>
+
 </main>
-<footer>&copy; 2026 Jio Miguel Ong &middot; Designed and built in <span>London</span></footer>
+
+<footer>
+  <span>© 2026 Jio Miguel Ong</span>
+  <span class="ft-amber">London</span>
+</footer>
 </body>
 </html>

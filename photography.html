@@ -1,140 +1,265 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Photography - Jio Miguel Ong</title>
-<meta name="description" content="A gallery of animal and wildlife photography by Jio Miguel Ong, taken across London and beyond." />
-<meta property="og:type" content="website" />
-<meta property="og:site_name" content="Jio Miguel Ong" />
-<meta property="og:url" content="https://jiomiguelong.uk/photography" />
-<meta property="og:title" content="Photography - Jio Miguel Ong" />
-<meta property="og:description" content="Animal and wildlife photography shot on a Nikon Z50, taken across London and beyond." />
-<meta property="og:image" content="https://jiomiguelong.uk/og-image.png" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Photography - Jio Miguel Ong" />
-<meta name="twitter:description" content="Animal and wildlife photography shot on a Nikon Z50, taken across London and beyond." />
-<meta name="twitter:image" content="https://jiomiguelong.uk/og-image.png" />
-<meta name="theme-color" content="#F4D8CD" />
-<link rel="icon" href="/favicon.ico" sizes="any">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Photography — Jio Miguel Ong</title>
+<meta name="description" content="A gallery of animal and wildlife photography by Jio Miguel Ong, taken across London and beyond.">
+<meta name="theme-color" content="#0D0B0A">
+<meta property="og:title" content="Photography — Jio Miguel Ong">
+<meta property="og:description" content="Wildlife photography shot on a Nikon Z50, taken across London and beyond.">
+<meta property="og:image" content="https://jiomiguelong.uk/og-image.png">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="canonical" href="https://jiomiguelong.uk/photography">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Bitter:ital,wght@0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,700;0,800;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="shared.css">
 <style>
-  .gallery-header { padding: 150px 36px 50px; max-width: 1280px; margin: 0 auto; position: relative; }
-  .gallery-header .subtitle { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 22px; color: var(--plum); }
-  .gallery-header h1 { font-family: "Bitter", Georgia, serif; font-weight: 800; font-size: clamp(44px, 7vw, 96px); line-height: 0.95; letter-spacing: -0.035em; margin-bottom: 24px; max-width: 900px; }
-  .gallery-header h1 em { font-style: italic; font-weight: 400; color: var(--plum); }
-  .gallery-header p.lede { font-size: clamp(17px, 1.4vw, 21px); max-width: 620px; color: var(--muted); }
+  .page-header {
+    padding: 140px 56px 60px;
+    max-width: 1200px; margin: 0 auto; width: 100%;
+  }
+  .page-header h1 {
+    font-family: 'Bitter', Georgia, serif;
+    font-size: clamp(48px, 7.5vw, 100px);
+    font-weight: 800; line-height: .92;
+    letter-spacing: -.035em; margin-bottom: 20px;
+  }
+  .page-header h1 em { font-style: italic; font-weight: 400; color: var(--amber); }
+  .page-header .lede {
+    font-size: clamp(16px, 1.3vw, 18px);
+    color: var(--muted); max-width: 520px; line-height: 1.68;
+  }
+  .page-header .gear {
+    margin-top: 14px; font-size: 12px; font-weight: 600;
+    color: var(--dim); letter-spacing: .04em;
+  }
 
-  .gallery { max-width: 1280px; margin: 0 auto; padding: 0 30px 110px; display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
-  .photo { position: relative; border-radius: 18px; overflow: hidden; cursor: zoom-in; box-shadow: 0 8px 22px rgba(58, 46, 57, 0.10); transition: transform 0.3s ease, box-shadow 0.3s ease; background: var(--bg-soft); aspect-ratio: 3 / 2; }
-  /* ponytail: stagger via CSS custom prop instead of setTimeout */
-  .photo { opacity: 0; transform: translateY(20px); transition: opacity 0.5s ease, transform 0.5s ease, box-shadow 0.3s ease; transition-delay: calc(var(--i, 0) * 40ms); }
-  .photo.in { opacity: 1; transform: translateY(0); }
-  .photo:hover { transform: translateY(-4px) scale(1.01); box-shadow: var(--shadow); z-index: 2; }
+  .gallery {
+    max-width: 1200px; margin: 0 auto;
+    padding: 0 56px 100px; width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(276px, 1fr));
+    gap: 14px;
+  }
+  .photo {
+    position: relative; overflow: hidden;
+    border-radius: 6px;
+    aspect-ratio: 3 / 2;
+    background: var(--surface);
+    cursor: zoom-in;
+    transition: transform .3s ease;
+  }
+  .photo::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: rgba(233,169,110,0);
+    transition: background .25s;
+    pointer-events: none;
+  }
+  .photo:hover { transform: translateY(-3px); }
+  .photo:hover::after { background: rgba(233,169,110,.06); }
   .photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .photo { opacity: 0; transform: translateY(16px); transition: opacity .5s ease, transform .5s ease, box-shadow .25s; transition-delay: calc(var(--i, 0) * 35ms); }
+  .photo.in { opacity: 1; transform: translateY(0); }
 
-  .empty-state { max-width: 760px; margin: 10px auto 120px; padding: 56px 40px; text-align: center; background: var(--bg-soft); border: 2px dashed rgba(58, 46, 57, 0.25); border-radius: 28px; }
-  .empty-state h2 { font-family: "Bitter", Georgia, serif; font-weight: 700; font-size: 28px; margin-bottom: 14px; }
-  .empty-state p { font-size: 16px; color: var(--muted); max-width: 520px; margin: 0 auto 10px; }
-  .empty-state code { background: var(--ink); color: var(--bg); padding: 2px 8px; border-radius: 6px; font-size: 13px; }
-
-  .lightbox { position: fixed; inset: 0; z-index: 100; background: rgba(58, 46, 57, 0.94); display: none; align-items: center; justify-content: center; padding: 40px; }
+  /* LIGHTBOX */
+  .lightbox {
+    position: fixed; inset: 0; z-index: 200;
+    background: rgba(13,11,10,.96);
+    display: none; align-items: center; justify-content: center;
+    padding: 48px;
+  }
   .lightbox.open { display: flex; }
-  .lightbox img { max-width: 90vw; max-height: 82vh; border-radius: 12px; box-shadow: 0 30px 80px rgba(0,0,0,0.6); }
-  .lightbox button.lb-btn { position: absolute; background: rgba(244, 216, 205, 0.12); border: 1px solid rgba(244, 216, 205, 0.3); color: var(--bg); width: 52px; height: 52px; border-radius: 50%; font-size: 22px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 0.2s ease, transform 0.2s ease; }
-  .lightbox button.lb-btn:hover { background: var(--accent); transform: scale(1.08); }
-  .lb-close { top: 26px; right: 26px; }
-  .lb-prev { left: 26px; top: 50%; transform: translateY(-50%); }
-  .lb-next { right: 26px; top: 50%; transform: translateY(-50%); }
-  .lb-prev:hover, .lb-next:hover { transform: translateY(-50%) scale(1.08); }
-  @media (max-width: 640px) { .lb-prev { left: 12px; } .lb-next { right: 12px; } .lb-btn { width: 44px; height: 44px; font-size: 18px; } }
+  .lightbox img {
+    max-width: 90vw; max-height: 82vh;
+    border-radius: 4px;
+    box-shadow: 0 40px 100px rgba(0,0,0,.8);
+  }
+  .lb-btn {
+    position: absolute;
+    background: rgba(240,235,227,.08);
+    border: 1px solid rgba(240,235,227,.16);
+    color: var(--ink); width: 50px; height: 50px;
+    border-radius: 50%; font-size: 22px;
+    cursor: pointer; display: flex; align-items: center; justify-content: center;
+    transition: background .2s, transform .2s;
+  }
+  .lb-btn:hover { background: var(--amber); color: var(--bg); }
+  .lb-close { top: 24px; right: 24px; }
+  .lb-prev { left: 24px; top: 50%; transform: translateY(-50%); }
+  .lb-next { right: 24px; top: 50%; transform: translateY(-50%); }
+  .lb-prev:hover { transform: translateY(-50%) scale(1.06); }
+  .lb-next:hover { transform: translateY(-50%) scale(1.06); }
 
-  @media (max-width: 900px) { .gallery-header { padding: 120px 20px 40px; } .gallery { padding: 0 14px 70px; } }
-  @media (prefers-reduced-motion: reduce) { .photo { opacity: 1 !important; transform: none !important; transition-delay: 0ms !important; } }
+  .empty-state {
+    max-width: 680px; margin: 20px auto 100px;
+    padding: 56px 40px; text-align: center;
+    border: 1px dashed var(--border-mid); border-radius: 12px;
+  }
+  .empty-state h2 { font-family: 'Bitter', Georgia, serif; font-size: 26px; font-weight: 700; margin-bottom: 12px; }
+  .empty-state p { font-size: 15px; color: var(--muted); margin-bottom: 10px; line-height: 1.6; }
+  .empty-state code { background: var(--surface); padding: 2px 7px; border-radius: 4px; font-size: 13px; border: 1px solid var(--border-mid); }
+
+  @media (max-width: 900px) {
+    .page-header { padding: 110px 22px 48px; }
+    .gallery { padding: 0 14px 80px; }
+    .lb-prev { left: 10px; }
+    .lb-next { right: 10px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .photo { opacity: 1 !important; transform: none !important; transition-delay: 0ms !important; }
+  }
 </style>
 </head>
 <body>
 <a href="#main" class="skip-link">Skip to main content</a>
-<nav class="top" aria-label="Main"><a href="/" class="brand"><img src="/assets/logo.png" alt="Jio Miguel Ong" height="38"></a><ul><li><a href="/">About</a></li><li><a href="/experience">Experience</a></li><li><a href="/education">Education</a></li><li><a href="/photography" aria-current="page">Photography</a></li><li><a href="/socials">Socials</a></li></ul></nav>
+
+<nav class="nav" aria-label="Main">
+  <a href="/" class="nav-brand">Jio Miguel Ong</a>
+  <ul>
+    <li><a href="/" class="nav-link">About</a></li>
+    <li><a href="/experience" class="nav-link">Experience</a></li>
+    <li><a href="/education" class="nav-link">Education</a></li>
+    <li><a href="/photography" class="nav-link" aria-current="page">Photography</a></li>
+    <li><a href="/socials" class="nav-link">Socials</a></li>
+  </ul>
+  <a href="/assets/Jio-Miguel-Ong-CV.pdf" download class="nav-cv">CV ↓</a>
+</nav>
+
 <main id="main">
-<header class="gallery-header"><p class="subtitle">A personal hobby</p><h1>Through the <em>lens</em>.</h1><p class="lede">A collection of photographs from my photography hobby, shot on a Nikon Z50 with the NIKKOR Z DX 16-50mm f/3.5-6.3 VR lens.</p></header>
-<h2 class="sr-only">Gallery</h2>
-<section class="gallery" id="gallery" aria-label="Photo gallery"></section>
-<section class="empty-state" id="emptyState" hidden><h2>The gallery is ready and waiting for photos.</h2><p>Add your image files to the <code>photos</code> folder, then the page will display them here.</p><p>Name files clearly, for example <code>red-fox-richmond-park.jpg</code>, and captions are generated automatically.</p></section>
+
+  <header class="page-header">
+    <p class="eyebrow">A personal hobby</p>
+    <h1>Through the <em>lens</em>.</h1>
+    <p class="lede">A collection of photographs from my photography hobby, taken across London and beyond.</p>
+    <p class="gear">Nikon Z50 · NIKKOR Z DX 16–50mm f/3.5–6.3 VR</p>
+  </header>
+
+  <hr class="rule">
+
+  <section class="gallery" id="gallery" aria-label="Photo gallery"></section>
+  <section id="emptyState" hidden>
+    <div class="empty-state">
+      <h2>The gallery is ready and waiting for photos.</h2>
+      <p>Add your image files to the <code>photos</code> folder — the page will display them here automatically.</p>
+      <p>Name files clearly, e.g. <code>red-fox-richmond-park.jpg</code>, and captions are generated automatically.</p>
+    </div>
+  </section>
+
 </main>
-<div class="lightbox" id="lightbox" role="dialog" aria-label="Photo viewer" aria-hidden="true"><button class="lb-btn lb-close" id="lbClose" aria-label="Close">&times;</button><button class="lb-btn lb-prev" id="lbPrev" aria-label="Previous photo">&#8249;</button><img id="lbImg" src="" alt="" /><button class="lb-btn lb-next" id="lbNext" aria-label="Next photo">&#8250;</button></div>
-<footer>&copy; 2026 Jio Miguel Ong &middot; Photographed in and around <span>London</span></footer>
-<style>.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }</style>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-label="Photo viewer" aria-hidden="true">
+  <button class="lb-btn lb-close" id="lbClose" aria-label="Close">&times;</button>
+  <button class="lb-btn lb-prev" id="lbPrev" aria-label="Previous photo">&#8249;</button>
+  <img id="lbImg" src="" alt="">
+  <button class="lb-btn lb-next" id="lbNext" aria-label="Next photo">&#8250;</button>
+</div>
+
+<footer>
+  <span>© 2026 Jio Miguel Ong</span>
+  <span class="ft-amber">London</span>
+</footer>
+
 <script>
-  var photos = [
-    {file:"dsc_0437.jpg", alt:"Wildlife photograph from the collection"},
-    {file:"dsc_0597.jpg", alt:"Wildlife photograph from the collection"},
-    {file:"dsc_0633.jpg", alt:"Wildlife photograph from the collection"},
-    {file:"dsc_0652.jpg", alt:"Wildlife photograph from the collection"},
-    {file:"dsc_0661.jpg", alt:"Wildlife photograph from the collection"},
-    {file:"dsc_0677.jpg", alt:"Wildlife photograph from the collection"},
-    {file:"dsc_0699.jpg", alt:"Wildlife photograph from the collection"},
-    {file:"dsc_0736.jpg", alt:"Wildlife photograph from the collection"},
-    {file:"dsc_0993.jpg", alt:"Wildlife photograph from the collection"},
-    {file:"dsc_1004.jpg", alt:"Wildlife photograph from the collection"},
-    {file:"dsc_1015.jpg", alt:"Wildlife photograph from the collection"},
-    {file:"dsc_1030.jpg", alt:"Wildlife photograph from the collection"},
-    {file:"dsc_1039.jpg", alt:"Wildlife photograph from the collection"},
-    {file:"dsc_1044.jpg", alt:"Wildlife photograph from the collection"},
-    {file:"dsc_1075.jpg", alt:"Wildlife photograph from the collection"},
-    {file:"dsc_1079.jpg", alt:"Wildlife photograph from the collection"},
-    {file:"dsc_1102.jpg", alt:"Wildlife photograph from the collection"},
-    {file:"dsc_1194.jpg", alt:"Wildlife photograph from the collection"},
-    {file:"dsc_1207.jpg", alt:"Wildlife photograph from the collection"},
-    {file:"dsc_1234.jpg", alt:"Wildlife photograph from the collection"},
-    {file:"dsc_1239.jpg", alt:"Wildlife photograph from the collection"},
-    {file:"dsc_1262.jpg", alt:"Wildlife photograph from the collection"},
-    {file:"dsc_1286.jpg", alt:"Wildlife photograph from the collection"},
-    {file:"dsc_1421.jpg", alt:"Wildlife photograph from the collection"},
-    {file:"dsc_1445.jpg", alt:"Wildlife photograph from the collection"}
-  ];
-  // ponytail: replace alt values above with real descriptions per photo
-  var gallery=document.getElementById('gallery'),emptyState=document.getElementById('emptyState');
-  function render(list){gallery.innerHTML='';list.forEach(function(p,i){var fig=document.createElement('figure');fig.className='photo';fig.style.setProperty('--i',i);fig.dataset.index=i;fig.innerHTML='<img loading="lazy" src="photos/thumbs/'+p.file+'" alt="'+p.alt+'" width="420" height="280">';fig.addEventListener('click',function(){openLightbox(i)});gallery.appendChild(fig);requestAnimationFrame(function(){fig.classList.add('in')})})}
-  var current=[];
-  function init(){if(!photos.length){emptyState.hidden=false;gallery.hidden=true;return}current=photos;render(photos)}
+var photos = [
+  {file:"dsc_0437.jpg",alt:"Wildlife photograph from the collection"},
+  {file:"dsc_0597.jpg",alt:"Wildlife photograph from the collection"},
+  {file:"dsc_0633.jpg",alt:"Wildlife photograph from the collection"},
+  {file:"dsc_0652.jpg",alt:"Wildlife photograph from the collection"},
+  {file:"dsc_0661.jpg",alt:"Wildlife photograph from the collection"},
+  {file:"dsc_0677.jpg",alt:"Wildlife photograph from the collection"},
+  {file:"dsc_0699.jpg",alt:"Wildlife photograph from the collection"},
+  {file:"dsc_0736.jpg",alt:"Wildlife photograph from the collection"},
+  {file:"dsc_0993.jpg",alt:"Wildlife photograph from the collection"},
+  {file:"dsc_1004.jpg",alt:"Wildlife photograph from the collection"},
+  {file:"dsc_1015.jpg",alt:"Wildlife photograph from the collection"},
+  {file:"dsc_1030.jpg",alt:"Wildlife photograph from the collection"},
+  {file:"dsc_1039.jpg",alt:"Wildlife photograph from the collection"},
+  {file:"dsc_1044.jpg",alt:"Wildlife photograph from the collection"},
+  {file:"dsc_1075.jpg",alt:"Wildlife photograph from the collection"},
+  {file:"dsc_1079.jpg",alt:"Wildlife photograph from the collection"},
+  {file:"dsc_1102.jpg",alt:"Wildlife photograph from the collection"},
+  {file:"dsc_1194.jpg",alt:"Wildlife photograph from the collection"},
+  {file:"dsc_1207.jpg",alt:"Wildlife photograph from the collection"},
+  {file:"dsc_1234.jpg",alt:"Wildlife photograph from the collection"},
+  {file:"dsc_1239.jpg",alt:"Wildlife photograph from the collection"},
+  {file:"dsc_1262.jpg",alt:"Wildlife photograph from the collection"},
+  {file:"dsc_1286.jpg",alt:"Wildlife photograph from the collection"},
+  {file:"dsc_1421.jpg",alt:"Wildlife photograph from the collection"},
+  {file:"dsc_1445.jpg",alt:"Wildlife photograph from the collection"}
+];
 
-  var lb=document.getElementById('lightbox'),lbImg=document.getElementById('lbImg'),lbIndex=0;
-  var focusableEls, firstFocusable, lastFocusable, triggerEl;
+var gallery = document.getElementById('gallery');
+var emptyState = document.getElementById('emptyState');
+var current = [];
 
-  function openLightbox(i){
-    triggerEl=document.activeElement;
-    lbIndex=i;showLb();lb.classList.add('open');lb.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';
-    // focus trap setup
-    focusableEls=lb.querySelectorAll('button');
-    firstFocusable=focusableEls[0];lastFocusable=focusableEls[focusableEls.length-1];
-    document.getElementById('lbClose').focus();
-  }
-  function showLb(){var p=current[lbIndex];lbImg.src='photos/web/'+p.file;lbImg.alt=p.alt+' (full size)'}
-  function closeLb(){lb.classList.remove('open');lb.setAttribute('aria-hidden','true');document.body.style.overflow='';if(triggerEl)triggerEl.focus()}
-  function step(d){lbIndex=(lbIndex+d+current.length)%current.length;showLb()}
-
-  document.getElementById('lbClose').addEventListener('click',closeLb);
-  document.getElementById('lbNext').addEventListener('click',function(e){e.stopPropagation();step(1)});
-  document.getElementById('lbPrev').addEventListener('click',function(e){e.stopPropagation();step(-1)});
-  lb.addEventListener('click',function(e){if(e.target===lb)closeLb()});
-  document.addEventListener('keydown',function(e){
-    if(!lb.classList.contains('open'))return;
-    if(e.key==='Escape')closeLb();
-    if(e.key==='ArrowRight')step(1);
-    if(e.key==='ArrowLeft')step(-1);
-    // focus trap
-    if(e.key==='Tab'){
-      if(e.shiftKey){if(document.activeElement===firstFocusable){e.preventDefault();lastFocusable.focus()}}
-      else{if(document.activeElement===lastFocusable){e.preventDefault();firstFocusable.focus()}}
-    }
+function render(list) {
+  gallery.innerHTML = '';
+  list.forEach(function(p, i) {
+    var fig = document.createElement('figure');
+    fig.className = 'photo';
+    fig.style.setProperty('--i', i);
+    fig.dataset.index = i;
+    fig.innerHTML = '<img loading="lazy" src="photos/thumbs/' + p.file + '" alt="' + p.alt + '" width="420" height="280">';
+    fig.addEventListener('click', function() { openLightbox(i); });
+    gallery.appendChild(fig);
+    requestAnimationFrame(function() { requestAnimationFrame(function() { fig.classList.add('in'); }); });
   });
-  init();
+}
+
+function init() {
+  if (!photos.length) { emptyState.hidden = false; gallery.hidden = true; return; }
+  current = photos;
+  render(photos);
+}
+
+var lb = document.getElementById('lightbox');
+var lbImg = document.getElementById('lbImg');
+var lbIndex = 0;
+var triggerEl;
+
+function openLightbox(i) {
+  triggerEl = document.activeElement;
+  lbIndex = i; showLb();
+  lb.classList.add('open');
+  lb.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+  document.getElementById('lbClose').focus();
+}
+function showLb() {
+  var p = current[lbIndex];
+  lbImg.src = 'photos/web/' + p.file;
+  lbImg.alt = p.alt + ' (full size)';
+}
+function closeLb() {
+  lb.classList.remove('open');
+  lb.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+  if (triggerEl) triggerEl.focus();
+}
+function step(d) { lbIndex = (lbIndex + d + current.length) % current.length; showLb(); }
+
+document.getElementById('lbClose').addEventListener('click', closeLb);
+document.getElementById('lbNext').addEventListener('click', function(e) { e.stopPropagation(); step(1); });
+document.getElementById('lbPrev').addEventListener('click', function(e) { e.stopPropagation(); step(-1); });
+lb.addEventListener('click', function(e) { if (e.target === lb) closeLb(); });
+document.addEventListener('keydown', function(e) {
+  if (!lb.classList.contains('open')) return;
+  if (e.key === 'Escape') closeLb();
+  if (e.key === 'ArrowRight') step(1);
+  if (e.key === 'ArrowLeft') step(-1);
+  if (e.key === 'Tab') {
+    var focusable = lb.querySelectorAll('button');
+    var first = focusable[0]; var last = focusable[focusable.length - 1];
+    if (e.shiftKey) { if (document.activeElement === first) { e.preventDefault(); last.focus(); } }
+    else { if (document.activeElement === last) { e.preventDefault(); first.focus(); } }
+  }
+});
+
+init();
 </script>
 </body>
 </html>
